@@ -1,4 +1,4 @@
-Template.register.rendered=function ()
+Template.customerReg.rendered=function ()
 {
 
 }
