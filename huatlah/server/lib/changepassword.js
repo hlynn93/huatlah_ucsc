@@ -1,6 +1,8 @@
 Meteor.methods({
-  changepwd: function(obj) {
-    console.log(obj.oldpassword.value);
-    Accounts.changePassword(obj.oldpassword.value,obj.password.value);
+  changepwd: function(event) {
+    var oldpwd = event.oldpassword.value;
+    var pwd = event.password.value;
+    console.log(oldpwd);
+    Accounts.changePassword(oldpwd,pwd);
       }
 });
