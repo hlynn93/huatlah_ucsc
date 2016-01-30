@@ -4,8 +4,9 @@ Template.needyReg.rendered=function ()
 }
 
 Template.needyReg.helpers({
-  registerSchema: function() {
-    return needy;
+  needySchema: function() {
+    SimpleSchema.debug = true;
+    return needySchema;
   }
 });
 

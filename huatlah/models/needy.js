@@ -2,12 +2,7 @@
 // if there is no use of this model, please delete it
 
 needy = new Mongo.Collection('needy');
-
-needy.attachSchema(new SimpleSchema({
-    customer_id:
-      {
-        type:Number
-      },
+needySchema = new SimpleSchema({
     name: {
       type: String
     },
@@ -15,13 +10,16 @@ needy.attachSchema(new SimpleSchema({
       type: String
     },
     coupon_quantity: {
-      type: Number
+      type: Number,
+      optional:true
     },
     retailer_list: {
       type: Date,
-      denyUpdate: true
+      denyUpdate: true,
+      optional:true,
     }
-  })
+  });
+needy.attachSchema(needySchema
 );
 
 // Collection2 already does schema checking
