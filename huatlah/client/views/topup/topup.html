@@ -1,0 +1,14 @@
+<template name="topup">
+  <div class="twelve wide column">
+
+    {{#autoForm schema=topupSchema_client id="topupForm" type="method" meteormethod="topup"}}
+
+
+      {{> afQuickField name="amount"}}
+
+
+    {{/autoForm}}
+
+
+  </div>
+</template>
