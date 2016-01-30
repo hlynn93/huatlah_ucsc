@@ -6,7 +6,7 @@ Meteor.methods({
     if( Meteor.userId())
     {
 
-       Meteor.users.update(Meteor.userId(), {$set: {balance: obj.amount} });
+       Meteor.users.update(Meteor.userId(), {$set: {moneybalance: obj.amount} });
 
 }
 

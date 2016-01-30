@@ -3,52 +3,75 @@
 
     <div class="ui two column stackable doubling grid">
       <div class="column">
-      <div class="ui segment">
-        <div class="ui statistic">
-          <div class="label">
-            Points
+        <div class="ui segment">
+          <div class="ui statistic">
+            <div class="label">
+              Points
+            </div>
+            <div class="value">
+              500
+            </div>
           </div>
-          <div class="value">
-            500
-          </div>
+          <br />
+          {{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
         </div>
-        <br />
-        {{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
       </div>
-</div>
-<div class="column">
+      <div class="column">
 
-      <div class="ui segment">
+        <div class="ui segment">
 
-        <div class="ui statistic">
-          <div class="label">
-            Balance
+          <div class="ui statistic">
+            <div class="label">
+              Balance
+            </div>
+            <div class="value">
+              $150.00
+            </div>
           </div>
-          <div class="value">
-            $150.00
-          </div>
+
+          {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
         </div>
-
-        {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
       </div>
+
     </div>
 
-</div>
 
-
-  <div class="twelve wide column">
-
-    <div class="ui four column stackable doubling grid featured_vouchers">
-
+    <div class="twelve wide column">
       <div class="column">
         <div class="ui segment">
-          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+
+          <div class="ui four column stackable doubling grid featured_vouchers">
+
+            <div class="column">
+              <div class="ui segment">
+                <img src="/images/vouchers/sample_macdonald_voucher.png" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui segment">
+                <img src="/images/vouchers/sample_macdonald_voucher.png" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui segment">
+                <img src="/images/vouchers/sample_macdonald_voucher.png" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui segment">
+                <img src="/images/vouchers/sample_macdonald_voucher.png" />
+              </div>
+            </div>
+          </div>
+
+          <a href="/voucher_store">
+            <div class="ui blue button">View More Vouchers</div>
+          </a>
         </div>
-      </div>
 
       </div>
+    </div>
   </div>
-</div>
 
 
 </template>
