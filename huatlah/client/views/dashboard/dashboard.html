@@ -1,43 +1,90 @@
 <template name="dashboard">
+  <div class="twelve wide column">
 
-  <div class="eight wide column">
-
-    <div class="ui statistic">
-      <div class="label">
-        Points
+    <div class="ui two column stackable doubling grid">
+      <div class="column">
+      <div class="ui segment">
+        <div class="ui statistic">
+          <div class="label">
+            Points
+          </div>
+          <div class="value">
+            500
+          </div>
+        </div>
+        <br />
+        {{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
       </div>
-      <div class="value">
-        500
+</div>
+<div class="column">
+
+      <div class="ui segment">
+
+        <div class="ui statistic">
+          <div class="label">
+            Balance
+          </div>
+          <div class="value">
+            $150.00
+          </div>
+        </div>
+
+        {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
       </div>
     </div>
 
+</div>
 
-{{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
 
-  </div>
+  <div class="twelve wide column">
 
-  <div class="eight wide column">
+    <div class="ui four column stackable doubling grid featured_vouchers">
 
-    <div class="ui statistic">
-      <div class="label">
-        Balance
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
       </div>
-      <div class="value">
-        $150.00
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
       </div>
-    </div>
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
 
-    {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img src="/images/vouchers/sample_macdonald_voucher.png" />
+        </div>
+      </div>
 
-
-
+      </div>
   </div>
-
-  <div class="sixteen wide column">
-
-
-
-  </div>
+</div>
 
 
 </template>
