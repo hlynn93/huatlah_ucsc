@@ -11,13 +11,18 @@ customer = new SimpleSchema({
     },
 
     phone: {
-      type: Number,
+      type: String,
       decimal: false,
       custom: function () {
           if (this.value < 1000000000 || this.value > 9999999999)  {
               return ("phoneMismatch");
           }
       }
+    },
+
+    image_url: {
+      type: String,
+      optional: true
     },
 
     password: {
@@ -73,6 +78,13 @@ customer = new SimpleSchema({
       });
       Api.addCollection(Meteor.users);
   }
+
+
+  Meteor.users.allow({
+  	  insert: function () { return true; },
+  	  update: function () { return true; },
+  	  remove: function () { return true; }
+  });
 
 /*
 * custom errors message for autoform

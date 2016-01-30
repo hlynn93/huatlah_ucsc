@@ -11,9 +11,7 @@ Meteor.methods({
     profile: {
             name: "",
             phone: Obj.phone,
-            rewardpoints: 0,
-            moneybalance: 0,
-            // 1: customers, 2: retailers, 3: needy
+            // 1: customers, 2: retailers
             type: '2',
         }
       });

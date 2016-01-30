@@ -1,6 +1,3 @@
-// needy registration is based on customer.js as model.
-// if there is no use of this model, please delete it
-
 needy = new Mongo.Collection('needy');
 needySchema = new SimpleSchema({
     name: {
