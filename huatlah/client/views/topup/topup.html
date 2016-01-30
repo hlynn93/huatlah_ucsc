@@ -1,14 +1,31 @@
 <template name="topup">
-  <div class="twelve wide column">
+  <div class="seven wide column">
 
+    <div class="ui segment">
+      <h2>
+        Top up!
+      </h2>
+      <p>
+        Select an amount that you wish to top up into your HuatLah Card!
+      </p>
+
+      <div class="ui blue button">$20.00</div>
+<div class="ui red button">$50.00</div>
+<div class="ui teal button">$100.00</div>
+
+      <div class="ui action left icon input">
     {{#autoForm schema=topupSchema_client id="topupForm" type="method" meteormethod="topup"}}
-
-
+    <div class="ui corner labeled input">
       {{> afQuickField name="amount"}}
+      <div class="ui corner label">
+        <i class="asterisk icon"></i>
+      </div>
+    </div>
 
-
+      <button type="submit" class="ui button">Topup</button>
     {{/autoForm}}
-
+  </div>
+</div>
 
   </div>
 </template>

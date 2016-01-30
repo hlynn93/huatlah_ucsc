@@ -2,6 +2,10 @@ needy = new Mongo.Collection('needy');
 
 needy.attachSchema(
     new SimpleSchema({
+      customer_id:
+      {
+        type:Number
+      },
     name: {
       type: String
     },
