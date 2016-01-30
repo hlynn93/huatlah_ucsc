@@ -23,7 +23,7 @@ customer.attachSchema(
                 return ("passwordMismatch");
             }
         }
-    }
+    },
     rewardpoints: {
       type: Number,
     },
@@ -45,7 +45,7 @@ customer.attachSchema(
 * custom validation and autoform have no predefined messages for it
 */
 
-userSchema.messages({
+customer.messages({
 "passwordMismatch": "Passwords do not match! Try again!",
 });
 
