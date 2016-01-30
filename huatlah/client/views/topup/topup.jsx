@@ -5,6 +5,7 @@ Template.topup.rendered=function ()
 
 Template.topup.helpers({
   topupSchema_client: function() {
+    SimpleSchema.debug = true;
     return topupSchema;
   }
 });
