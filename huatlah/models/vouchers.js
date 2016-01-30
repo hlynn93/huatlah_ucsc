@@ -1,22 +1,34 @@
 vouchers = new Mongo.Collection('vouchers');
+voucherSchema = new SimpleSchema({
+name: {
+  type: String
+},
+quantity: {
+  type: Number
+},
+customer_list: {
+  type: String,
+  optional: true
+},
+expire: {
+  type: Date,
+}
+});
 
-vouchers.attachSchema(
-  new SimpleSchema({
-  name: {
-    type: String
+
+vouchers.attachSchema(voucherSchema);
+
+Files = new FS.Collection("files", {
+  stores: [new FS.Store.GridFS("filesStore")]
+});
+
+Files.allow({
+  download: function () {
+    return true;
   },
-  quantity: {
-    type: String
-  },
-  customer_list: {
-    type: String
-  },
-  expire: {
-    type: Date,
-    denyUpdate: true
-  }
-})
-);
+  fetch: null
+});
+
 
 // Collection2 already does schema checking
 // Add custom permission rules if needed

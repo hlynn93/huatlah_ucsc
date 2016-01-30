@@ -17,10 +17,14 @@
       <i class="home icon"></i> Home
     </a>
     {{/if}}
-
-    <a class="item">
+    {{#if currentUser}}
+    {{else}}
+    <a class="item" href="/login">
       <i class="sign in icon"></i> Login
     </a>
+    {{/if}}
+
+
     <div class="ui simple dropdown item">
       <a href="/register">
       Sign Up!

@@ -40,3 +40,6 @@ meteorhacks:inject-initial
 react-template-helper
 aslagle:reactive-table
 aldeed:autoform
+cfs:autoform
+cfs:standard-packages
+cfs:gridfs@0.0.31
