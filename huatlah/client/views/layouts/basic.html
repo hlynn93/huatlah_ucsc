@@ -3,7 +3,9 @@
       <div class="row">
             {{> header}}
           </div>
-          <div class="row">
+          <div class="ui equal height grid">
+
+          <div class="row" style="padding-top:0px;">
 
             {{#if currentUser}}
             {{> sidebar}}
@@ -11,6 +13,7 @@
 
             {{> yield}}
           </div>
+        </div>
           <div class="row">
 
             {{> footer}}

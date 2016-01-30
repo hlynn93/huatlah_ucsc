@@ -10,6 +10,9 @@ Router.route( "users/update/:id", { where: "server" } )
     var id = this.params.id;
     var data=  this.request.body;
     Meteor.users.update(id,{$set:{"profile.moneybalance":Number(data.moneybalance),"profile.rewardpoints":Number(data.rewardpoints) }});
+    this.response.setHeader( 'access-control-allow-origin', '*' );
+    this.response.statusCode = 200;
+    this.response.end();
 
   })
   .delete( function() {

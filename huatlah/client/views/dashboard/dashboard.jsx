@@ -14,7 +14,7 @@ Template.dashboard.helpers({
   settings: function () {
     return {
         collection: transactions,
-        rowsPerPage: 5,
+        rowsPerPage: 3,
         showFilter: false,
         fields: [ 'actualAmount', 'diffAmount','createdAt']
     };
