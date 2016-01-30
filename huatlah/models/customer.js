@@ -65,7 +65,6 @@ customer = new SimpleSchema({
 
   if (Meteor.isServer) {
       var Api = new Restivus({
-        useDefaultAuth: true,
         prettyJson: true
       });
       Api.addCollection(Meteor.users);
