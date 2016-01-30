@@ -40,7 +40,7 @@ customer = new SimpleSchema({
     },
 
     moneybalance: {
-      type: Number,
+      type: [Number],
       optional: true
 
     },
