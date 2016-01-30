@@ -13,7 +13,6 @@ customer = new SimpleSchema({
     phone: {
       type: Number,
       optional: true,
-
     },
 
     password: {
