@@ -13,7 +13,7 @@ transactions.attachSchema(
       type: Number,
       decimal:true
     },
-    actualAmount: {
+    diffAmount: {
       type: Number,
       decimal:true
     },
