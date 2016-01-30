@@ -32,7 +32,7 @@ cfs:collection@0.0.1
 cfs:collection-filters@0.0.0
 cfs:data-man@0.0.6
 cfs:file@0.1.15
-cfs:gridfs@0.0.33
+cfs:filesystem@0.1.2
 cfs:http-methods@0.0.30
 cfs:http-publish@0.0.13
 cfs:power-queue@0.0.1
@@ -41,6 +41,7 @@ cfs:reactive-property@0.0.4
 cfs:standard-packages@0.0.2
 cfs:storage-adapter@0.2.1
 cfs:tempstore@0.0.2
+cfs:ui@0.1.3
 cfs:upload-http@0.0.2
 cfs:worker@0.0.0
 check@1.1.0
@@ -60,6 +61,7 @@ ecmascript-runtime@0.2.6
 ejson@1.0.7
 email@1.0.8
 fastclick@1.0.7
+fortawesome:fontawesome@4.5.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -98,6 +100,8 @@ momentjs:moment@2.10.6
 mongo@1.1.3
 mongo-id@1.0.1
 mongo-livedata@1.0.9
+mpowaga:jquery-fileupload@9.11.2
+mpowaga:jquery-ui-widget@1.11.4
 natestrauser:animate-css@3.4.0
 nimble:restivus@0.8.4
 npm-bcrypt@0.7.8_2
@@ -142,4 +146,5 @@ useraccounts:core@1.13.1
 useraccounts:semantic-ui@1.13.1
 webapp@1.2.3
 webapp-hashing@1.0.5
+yogiben:autoform-file@0.4.2
 zimme:iron-router-active@1.0.4

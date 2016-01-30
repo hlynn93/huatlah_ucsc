@@ -4,29 +4,23 @@
 
 
 
-    {{#autoForm schema=voucherStoreAddSchema_client id="voucherStoreAddForm" type="method" meteormethod="addVoucher"}}
+    {{#autoForm class="ui form" schema=voucherStoreAddSchema_client id="voucherStoreAddForm" type="method" meteormethod="addVoucher"}}
 
-    <form class="ui form">
       <div class="field">
-        <label>First Name</label>
         {{> afQuickField name="name"}}
       </div>
       <div class="field">
-        <label>Last Name</label>
         {{> afQuickField name="quantity"}}
       </div>
       <div class="field">
         <label>Upload Files</label>
 
-          {{> afQuickField name="fileId" type="cfs-file" collection="files"}}
+        {{> afQuickField name="profilePic" collection="Images"}}
       </div>
       <div class="field">
-        <label>Expire</label>
-
           {{> afQuickField name="expire" type="datetime-local"}}
       </div>
       <button class="ui button" type="submit">Submit</button>
-    </form>
     {{/autoForm}}
 
   </div>

@@ -50,6 +50,16 @@ customer = new SimpleSchema({
       type: String,
       optional: true
     },
+    meal_name: {
+      type: String,
+      optional: true
+
+    },
+    needy_list: {
+      type: String,
+      optional: true
+
+    }
 
   });
 
