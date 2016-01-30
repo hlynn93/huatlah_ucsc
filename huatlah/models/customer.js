@@ -50,6 +50,12 @@ customer = new SimpleSchema({
 
     },
 
+    //individual retailer's vouchers for them to keep track
+    voucher_repo: {
+      type: String,
+      optional: true
+    },
+
     voucher_list: {
       type: String,
       optional: true

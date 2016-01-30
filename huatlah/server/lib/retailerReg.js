@@ -11,6 +11,8 @@ Meteor.methods({
     profile: {
             name: "",
             phone: Obj.phone,
+            voucher_repo: "",
+            image_url: "",
             // 1: customers, 2: retailers
             type: '2',
         }
