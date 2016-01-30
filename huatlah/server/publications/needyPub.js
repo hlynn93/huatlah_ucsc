@@ -1,3 +1,3 @@
-Meteor.publish('needy', function () {
+Meteor.publish('needyPublisher', function () {
   return needy.find();
 });
