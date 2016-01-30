@@ -13,6 +13,7 @@ Meteor.methods({
             phone: Obj.phone,
             rewardpoints: 0,
             moneybalance: 0,
+            oldpassword: "",
             // 1: customers, 2: retailers, 3: needy
             type: '1',
         }

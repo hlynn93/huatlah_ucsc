@@ -1,17 +1,17 @@
-Template.retailerReg.rendered=function ()
+Template.changepassword.rendered=function ()
 {
 
 }
 
-Template.retailerReg.helpers({
+Template.changepassword.helpers({
   registerSchema: function() {
     //SimpleSchema.debug = true;
     return customer;
   }
 });
 
-AutoForm.addHooks(['retailerForm'],{
+AutoForm.addHooks(['changepasswordForm'],{
     onSuccess: function(formType, result) {
-        Router.go("login");
+        Router.go("dashboard");
     }
 });

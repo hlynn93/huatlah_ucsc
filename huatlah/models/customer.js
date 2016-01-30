@@ -7,12 +7,14 @@ customer = new SimpleSchema({
 
     email: {
       type: String,
-      regEx: SimpleSchema.RegEx.Email
+      regEx: SimpleSchema.RegEx.Email,
+      optional: true
     },
 
     phone: {
       type: String,
       decimal: false,
+      optional: true,
       custom: function () {
           if (this.value < 1000000000 || this.value > 9999999999)  {
               return ("phoneMismatch");
@@ -23,6 +25,11 @@ customer = new SimpleSchema({
     image_url: {
       type: String,
       optional: true
+    },
+
+    oldpassword: {
+      type: String,
+      optional:true
     },
 
     password: {

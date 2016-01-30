@@ -13,6 +13,7 @@ Meteor.methods({
             phone: Obj.phone,
             voucher_repo: "",
             image_url: "",
+            oldpassword: "",
             // 1: customers, 2: retailers
             type: '2',
         }

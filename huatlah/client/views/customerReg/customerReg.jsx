@@ -12,6 +12,6 @@ Template.customerReg.helpers({
 
 AutoForm.addHooks(['customerForm'],{
     onSuccess: function(formType, result) {
-        Router.go("dashboard");
+        Router.go("login");
     }
 });
