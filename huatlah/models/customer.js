@@ -1,7 +1,8 @@
 customer = new SimpleSchema({
 
     name: {
-      type: String
+      type: String,
+      optional: true,
     },
 
     email: {
@@ -10,7 +11,9 @@ customer = new SimpleSchema({
     },
 
     phone: {
-      type: String
+      type: String,
+      optional: true,
+
     },
 
     password: {
@@ -28,11 +31,14 @@ customer = new SimpleSchema({
     },
 
     rewardpoints: {
-      type: Number
+      type: Number,
+      optional: true
     },
 
     moneybalance: {
-      type: Number
+      type: Number,
+      optional: true,
+
     },
 
     // voucher_list: {
