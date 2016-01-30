@@ -43,7 +43,7 @@ aldeed:autoform
 cfs:autoform
 cfs:standard-packages
 nimble:restivus
-cfs:filesystem
 yogiben:autoform-file
+cfs:gridfs
 tomi:upload-server
 tomi:upload-jquery
