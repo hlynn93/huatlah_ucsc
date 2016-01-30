@@ -1,6 +1,15 @@
 Template.topup.rendered=function ()
 {
 
+
+  $( ".topupButton" ).click(function() {
+
+    var number = $(this).val();
+    $("input[name='amount']").val(number);
+
+
+});
+
 }
 
 Template.topup.helpers({
@@ -12,7 +21,6 @@ Template.topup.helpers({
 
 AutoForm.addHooks(['topupForm'],{
     onSuccess: function(formType, result) {
-        alert("Successfully Topup!");
         Router.go("dashboard");
     }
 });

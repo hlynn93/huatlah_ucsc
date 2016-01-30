@@ -1,4 +1,7 @@
 <template name="dashboard">
+  {{#with currentUser}}
+      {{#with profile}}
+
   <div class="twelve wide column">
 
     <div class="ui two column stackable doubling grid">
@@ -9,7 +12,7 @@
               Points
             </div>
             <div class="value">
-              500
+              {{rewardpoints}}
             </div>
           </div>
           <br />
@@ -25,7 +28,7 @@
               Balance
             </div>
             <div class="value">
-              $150.00
+              {{moneybalance}}
             </div>
           </div>
 
@@ -72,6 +75,7 @@
       </div>
     </div>
   </div>
-
+  {{/with}}
+{{/with}}
 
 </template>

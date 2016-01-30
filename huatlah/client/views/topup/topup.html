@@ -8,10 +8,9 @@
       <p>
         Select an amount that you wish to top up into your HuatLah Card!
       </p>
-
-      <div class="ui blue button">$20.00</div>
-<div class="ui red button">$50.00</div>
-<div class="ui teal button">$100.00</div>
+      <button  class="ui blue button topupButton" name="name" value="20" type="submit">$20.00</button>
+      <button  class="ui blue button topupButton" name="name" value="50" type="submit">$50.00</button>
+      <button  class="ui blue button topupButton" name="name" value="100" type="submit">$100.00</button>
 
       <div class="ui action left icon input">
     {{#autoForm schema=topupSchema_client id="topupForm" type="method" meteormethod="topup"}}

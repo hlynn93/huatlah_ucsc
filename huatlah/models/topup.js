@@ -1,5 +1,5 @@
 topupSchema = new SimpleSchema({
-    Amount: {
+    amount: {
         type: Number
     }
 });
