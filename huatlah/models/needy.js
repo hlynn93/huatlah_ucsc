@@ -1,11 +1,8 @@
-needy = new Mongo.Collection('needy');
+// needy registration is based on customer.js as model.
+// if there is no use of this model, please delete it
 
-needy.attachSchema(
-    new SimpleSchema({
-      customer_id:
-      {
-        type:Number
-      },
+needy = new Mongo.Collection('needy');
+needySchema = new SimpleSchema({
     name: {
       type: String
     },
@@ -13,13 +10,16 @@ needy.attachSchema(
       type: String
     },
     coupon_quantity: {
-      type: Number
+      type: Number,
+      optional:true
     },
     retailer_list: {
       type: Date,
-      denyUpdate: true
+      denyUpdate: true,
+      optional:true,
     }
-  })
+  });
+needy.attachSchema(needySchema
 );
 
 // Collection2 already does schema checking
