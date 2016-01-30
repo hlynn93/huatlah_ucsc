@@ -2,11 +2,15 @@
     <div class="twelve wide column">
     {{#autoForm class="ui form" schema=updateSchema id="customerForm" collection="Meteor.users" doc=currentUser type="update"}}
       <legend>Your Profile</legend>
+      <div class="field">
+        <label>Profile Picture</label>
+        {{> upload_semanticUI}}
+      </div>
       {{> afQuickField name="name" placeholder="Your Name"}}
       {{> afQuickField name="phone" placeholder="Your Phone Number"}}
-      {{> afQuickField name="image_url" placeholder="Your Profile Picture"}}
+      {{> afQuickField class="image_url" name="image_url" placeholder="Your Profile Picture" type="hidden"}}
       <div>
-        <button type="submit" class="btn btn-primary" disabled="{{disableButtons}}">Submit</button>
+        <button disabled="disabled" type="submit" class="updateButton btn btn-primary">Update Profile</button>
       </div>
     {{/autoForm}}
     </div>
