@@ -1,11 +1,13 @@
 <template name="customerReg">
+  <div class="twelve wide column">
   {{#autoForm class="ui form" schema=registerSchema id="customerForm" type="method" meteormethod="register"}}
     <legend>Register</legend>
-    {{> afQuickField name="email"}}
-    {{> afQuickField name="password" type="password"}}
-    {{> afQuickField name="passwordConfirmation" type="password"}}
+    {{> afQuickField name="email" placeholder="Your Email"}}
+    {{> afQuickField name="password" type="password" placeholder="Your Password"}}
+    {{> afQuickField name="passwordConfirmation" type="password" placeholder="Your Password Again"}}
     <div>
-      <button type="submit" class="btn btn-primary" label="Submit">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   {{/autoForm}}
+</div>
 </template>
