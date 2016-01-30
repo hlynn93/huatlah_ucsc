@@ -1,7 +1,4 @@
-customer = new Mongo.Collection('customer');
-
-customer.attachSchema(
-    new SimpleSchema({
+customer = new SimpleSchema({
     name: {
       type: String,
     },
@@ -36,8 +33,7 @@ customer.attachSchema(
     transaction_list: {
       type: String,
     },
-  })
-);
+  });
 
 /*
 * custom errors message for autoform
@@ -48,18 +44,3 @@ customer.attachSchema(
 customer.messages({
 "passwordMismatch": "Passwords do not match! Try again!",
 });
-
-
-if (Meteor.isServer) {
-  customer.allow({
-    insert : function () {
-      return true;
-    },
-    update : function () {
-      return true;
-    },
-    remove : function () {
-      return true;
-    }
-  });
-}
