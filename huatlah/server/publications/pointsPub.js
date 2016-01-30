@@ -1,3 +1,3 @@
-Meteor.publish('points', function () {
+Meteor.publish('pointsPublisher', function () {
   return points.find();
 });

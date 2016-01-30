@@ -11,6 +11,14 @@ Template.dashboard.helpers({
     'vouchersList': function() {
     return vouchers.find();
   },
+  settings: function () {
+    return {
+        collection: transactions,
+        rowsPerPage: 5,
+        showFilter: false,
+        fields: [ 'actualAmount', 'diffAmount','createdAt']
+    };
+},
 
     'user_id': function()
     {

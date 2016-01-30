@@ -6,9 +6,9 @@ Router.route( "users/update/:id", { where: "server" } )
     // If a POST request is made, create the user's profile.
   })
   .put( function() {
+    console.log("put");
     var id = this.params.id;
     var data=  this.request.body;
-
     Meteor.users.update(id,{$set:{"profile.moneybalance":Number(data.moneybalance),"profile.rewardpoints":Number(data.rewardpoints) }});
 
   })
