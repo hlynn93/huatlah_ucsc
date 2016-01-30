@@ -1,11 +1,13 @@
 <template name="basicLayout">
-    <div class="ui container">
+    <div id="main">
+        <header>
             {{> header}}
-            
+        </header>
+
             {{> yield}}
-
-            {{> sidebar}}
-
+            {{! Also a sidebar! }}
+        <footer>
             {{> footer}}
+        </footer>
     </div>
 </template>

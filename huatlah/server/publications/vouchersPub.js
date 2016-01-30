@@ -1,3 +1,3 @@
-Meteor.publish('vouchersPubisher', function () {
+Meteor.publish('vouchers', function () {
   return vouchers.find();
 });

@@ -1,3 +1,3 @@
-Meteor.publish('retailerPubisher', function () {
+Meteor.publish('retailer', function () {
   return retailer.find();
 });
