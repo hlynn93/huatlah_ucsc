@@ -11,7 +11,7 @@ customer = new SimpleSchema({
     },
 
     phone: {
-      type: String,
+      type: Number,
       decimal: false,
       custom: function () {
           if (this.value < 1000000000 || this.value > 9999999999)  {
