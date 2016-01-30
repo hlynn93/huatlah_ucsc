@@ -43,3 +43,4 @@ aldeed:autoform
 cfs:autoform
 cfs:standard-packages
 cfs:gridfs@0.0.31
+nimble:restivus
