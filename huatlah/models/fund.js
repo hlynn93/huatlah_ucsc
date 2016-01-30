@@ -22,4 +22,10 @@ if (Meteor.isServer) {
       return true;
     }
   });
+
+  var Api = new Restivus({
+    prettyJson: true
+  });
+  Api.addCollection(fund);
+
 }
