@@ -1,12 +1,19 @@
 <template name="basicLayout">
-    <div class="ui stackable grid relaxed container">
+    <div class="ui page stackable grid">
+      <div class="row">
             {{> header}}
+          </div>
+          <div class="row">
 
             {{#if currentUser}}
             {{> sidebar}}
             {{/if}}
 
             {{> yield}}
+          </div>
+          <div class="row">
+
             {{> footer}}
-    </div>
+          </div>
+  </div>
 </template>

@@ -1,8 +1,8 @@
 <template name="sidebar">
   {{#with currentUser}}
       {{#with profile}}
-  <div class="two wide column">
-    <div class="ui segment" style="padding:0px;">
+  <div class="two wide column" style="padding:0px;">
+    <div class="ui segment" style="padding:6px;">
 
       <img class="ui small circular image" style="display:block;margin:0 auto;padding-top:15px;" src="/upload/nicholas.jpg" />
 
@@ -13,33 +13,29 @@
       <div class="ui link list">
   <div class="active item">
       <a href="/topup">
-      <div class="ui button sidebarButton">
-        <i class="shop icon"></i>
+      <div class="ui sidebarButton">
+        <i class="money icon"></i>
         <br /> Top Up
       </div>
     </a>
     </div>
-  <div class="active item">
+  <div class="item">
       <a href="/add_voucher">
-      <div class="ui button sidebarButton">
-        <i class="shop icon"></i>
+      <div class="ui sidebarButton">
+        <i class="add circle icon"></i>
         <br />
         Add Voucher
       </div>
     </a>
   </div>
   <a class="item">
-    <a class="logout" href="#">
-    <div class="ui button sidebarButton">
-      <i class="shop icon"></i> Logout
+    <a class="logout" href="/logout">
+    <div class="ui sidebarButton">
+      <i class="sign out icon"></i>
+      <br />
+       Logout
     </div>
   </a>
-  </a>
-  <a class="item">
-
-  </a>
-  <a class="item">
-
   </a>
 </div>
 
