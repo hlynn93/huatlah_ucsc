@@ -24,9 +24,10 @@ Router.route("/redeem/:id/:user_id", function() {
   var curUser = Meteor.users.findOne(user_id);
   var profilePoints = curUser.profile.rewardpoints;
 
-  if(profilePoints > 0 && profilePoints >= v.points)
+  if(profilePoints > 0 && profilePoints >= v.points && v.quantity > 0)
   {
       Meteor.users.update(user_id,{$set: {"profile.rewardpoints": profilePoints  - v.points} });
+      vouchers.update(id,{$set: {"quantity": v.quantity - 1 } });
   }
   this.response.writeHead(302, {
     'Location':  '/dashboard'
