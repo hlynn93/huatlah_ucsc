@@ -11,8 +11,13 @@ customer = new SimpleSchema({
     },
 
     phone: {
-      type: Number,
-      optional: true,
+      type: String,
+      decimal: false,
+      custom: function () {
+          if (this.value < 1000000000 || this.value > 9999999999)  {
+              return ("phoneMismatch");
+          }
+      }
     },
 
     password: {
@@ -77,4 +82,5 @@ customer = new SimpleSchema({
 
 customer.messages({
 "passwordMismatch": "Passwords do not match! Try again!",
+"phoneMismatch": "Please input a valid phone number!",
 });
