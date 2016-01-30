@@ -18,7 +18,8 @@ transactions.attachSchema(
       decimal:true
     },
     createdAt: {
-      type: Date
+      type: Date,
+      optional:true
     }
   })
 );
@@ -42,5 +43,5 @@ if (Meteor.isServer) {
     prettyJson: true
   });
   Api.addCollection(transactions);
-  
+
 }
