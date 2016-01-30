@@ -36,4 +36,11 @@ if (Meteor.isServer) {
       return true;
     }
   });
+
+  var Api = new Restivus({
+    useDefaultAuth: true,
+    prettyJson: true
+  });
+  Api.addCollection(needy);
+
 }

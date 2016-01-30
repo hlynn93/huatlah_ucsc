@@ -53,6 +53,14 @@ customer = new SimpleSchema({
 
   });
 
+  if (Meteor.isServer) {
+      var Api = new Restivus({
+        useDefaultAuth: true,
+        prettyJson: true
+      });
+      Api.addCollection(Meteor.users);
+  }
+
 /*
 * custom errors message for autoform
 * we use it for the error 'passwordMismatch', since it is a
