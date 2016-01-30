@@ -1,0 +1,43 @@
+<template name="dashboard">
+
+  <div class="eight wide column">
+
+    <div class="ui statistic">
+      <div class="label">
+        Points
+      </div>
+      <div class="value">
+        500
+      </div>
+    </div>
+
+
+{{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
+
+  </div>
+
+  <div class="eight wide column">
+
+    <div class="ui statistic">
+      <div class="label">
+        Balance
+      </div>
+      <div class="value">
+        $150.00
+      </div>
+    </div>
+
+    {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
+
+
+
+  </div>
+
+  <div class="sixteen wide column">
+
+
+
+  </div>
+
+
+</template>
