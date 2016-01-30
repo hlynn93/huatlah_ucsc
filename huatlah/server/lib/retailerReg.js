@@ -1,5 +1,5 @@
 Meteor.methods({
-  customerRegister: function(Obj) {
+  retailerRegister: function(Obj) {
     // Important server-side check for security and data integrity
     check(Obj,customer);
 
@@ -14,7 +14,7 @@ Meteor.methods({
             rewardpoints: 0,
             moneybalance: 0,
             // 1: customers, 2: retailers, 3: needy
-            type: '1',
+            type: '2',
         }
       });
   }

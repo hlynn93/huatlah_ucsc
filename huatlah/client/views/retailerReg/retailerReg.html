@@ -1,7 +1,7 @@
-<template name="customerReg">
+<template name="retailerReg">
   <div class="twelve wide column">
-  {{#autoForm class="ui form" schema=registerSchema id="customerForm" type="method" meteormethod="customerRegister"}}
-    <legend>Register</legend>
+  {{#autoForm class="ui form" schema=registerSchema id="retailerForm" type="method" meteormethod="retailerRegister"}}
+    <legend>Welcome Onboard!</legend>
     {{> afQuickField name="email" placeholder="Your Email"}}
     {{> afQuickField name="phone" placeholder="Your Phone Number"}}
     {{> afQuickField name="password" type="password" placeholder="Your Password"}}
