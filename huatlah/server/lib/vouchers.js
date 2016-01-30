@@ -1,17 +1,6 @@
 Meteor.methods({
   addVoucher: function(obj) {
-
-    try {
       check(obj,voucherSchema);
-      console.log(obj.fileId);
-      vouchers.insert({name:obj.name,fileId:obj.fileId,quantity:obj.quantity,expire:obj.expire});
-
-}catch(e){
-  console.log(e);
-
-  throw new Meteor.Error(e);
-}
-
-
+      vouchers.insert({name:obj.name,image_url:obj.image_url,quantity:obj.quantity,expire:obj.expire});
   }
 });

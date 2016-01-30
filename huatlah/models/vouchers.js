@@ -8,6 +8,9 @@ name: {
 quantity: {
   type: Number
 },
+image_url: {
+  type: String
+},
 customer_list: {
   type: String,
   optional: true
@@ -16,6 +19,7 @@ expire: {
   type: Date,
 }
 });
+
 
 vouchers.attachSchema(voucherSchema);
 

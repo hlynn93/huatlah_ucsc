@@ -1,9 +1,12 @@
-Template.voucher_store_add.rendered=function ()
-{
-
-}
+Meteor.startup(function() {
+  Uploader.finished = function(index, fileInfo, templateContext) {
+    $(".addVoucherButton").removeAttr("disabled");
+          $(".image_url").val(fileInfo.name);
+  }
+});
 
 Template.voucher_store_add.helpers({
+
   voucherStoreAddSchema_client: function() {
     return voucherSchema;
   }
@@ -11,7 +14,8 @@ Template.voucher_store_add.helpers({
 
 AutoForm.addHooks(['voucherStoreAddForm'],{
     onSuccess: function(formType, result) {
-        alert("Successfully Topup!");
         Router.go("dashboard");
-    }
+    },
+
+
 });

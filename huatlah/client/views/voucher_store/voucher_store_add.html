@@ -11,12 +11,14 @@
         {{> afQuickField name="quantity"}}
       </div>
       <div class="field">
-        <label>Upload Files</label>
+        <label>Voucher Image</label>
+        {{> upload_semanticUI}}
+        {{> afQuickField class="image_url" name="image_url" type="hidden"}}
       </div>
       <div class="field">
           {{> afQuickField name="expire" type="datetime-local"}}
       </div>
-      <button class="ui button" type="submit">Submit</button>
+      <button class="ui button addVoucherButton" disabled="disabled" type="submit">Add Voucher</button>
     {{/autoForm}}
 
   </div>

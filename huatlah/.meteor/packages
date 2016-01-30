@@ -44,6 +44,6 @@ cfs:autoform
 cfs:standard-packages
 nimble:restivus
 yogiben:autoform-file
-cfs:gridfs
 tomi:upload-server
 tomi:upload-jquery
+cfs:filesystem
