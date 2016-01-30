@@ -18,8 +18,7 @@ transactions.attachSchema(
       decimal:true
     },
     createdAt: {
-      type: Date,
-      denyUpdate: true
+      type: Date
     }
   })
 );
