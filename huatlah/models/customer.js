@@ -1,17 +1,22 @@
 customer = new SimpleSchema({
+
     name: {
-      type: String,
+      type: String
     },
+
     email: {
       type: String,
       regEx: SimpleSchema.RegEx.Email
     },
+
     phone: {
-      type: Number,
+      type: String
     },
+
     password: {
-      type: String,
+      type: String
     },
+
     passwordConfirmation: {
         type: String,
         // this is a custom validation to ensure the password match
@@ -21,18 +26,23 @@ customer = new SimpleSchema({
             }
         }
     },
+
     rewardpoints: {
-      type: Number,
+      type: Number
     },
+
     moneybalance: {
-      type: Number,
+      type: Number
     },
-    voucher_list: {
-      type: String,
-    },
-    transaction_list: {
-      type: String,
-    },
+
+    // voucher_list: {
+    //   type: String
+    // },
+    //
+    // transaction_list: {
+    //   type: String
+    // },
+
   });
 
 /*

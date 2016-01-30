@@ -5,6 +5,7 @@ Template.customerReg.rendered=function ()
 
 Template.customerReg.helpers({
   registerSchema: function() {
+    SimpleSchema.debug = true;
     return customer;
   }
 });

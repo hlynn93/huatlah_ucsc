@@ -9,10 +9,10 @@ Meteor.methods({
     email: Obj.email,
     password: Obj.password,
     profile: {
-            name: Obj.name,
-            phone: Obj.phone,
-            rewardpoints: Obj.rewardpoints,
-            moneybalance: Obj.moneybalance,
+            name: "",
+            phone: "",
+            rewardpoints: 0,
+            moneybalance: 0,
             // 1: customers, 2: retailers, 3: needy
             type: '1',
         }
