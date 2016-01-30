@@ -3,6 +3,7 @@
   {{#autoForm class="ui form" schema=registerSchema id="customerForm" type="method" meteormethod="register"}}
     <legend>Register</legend>
     {{> afQuickField name="email" placeholder="Your Email"}}
+    {{> afQuickField name="phone" placeholder="Your Phone Number"}}
     {{> afQuickField name="password" type="password" placeholder="Your Password"}}
     {{> afQuickField name="passwordConfirmation" type="password" placeholder="Your Password Again"}}
     <div>

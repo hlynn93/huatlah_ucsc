@@ -11,7 +11,7 @@ customer = new SimpleSchema({
     },
 
     phone: {
-      type: String,
+      type: Number,
       optional: true,
 
     },

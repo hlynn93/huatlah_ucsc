@@ -10,7 +10,7 @@ Meteor.methods({
     password: Obj.password,
     profile: {
             name: "",
-            phone: "",
+            phone: Obj.phone,
             rewardpoints: 0,
             moneybalance: 0,
             // 1: customers, 2: retailers, 3: needy
