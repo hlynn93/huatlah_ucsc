@@ -2,6 +2,9 @@ transactions = new Mongo.Collection('transactions');
 
 transactions.attachSchema(
     new SimpleSchema({
+    customer_id: {
+      type: String
+    },
     title: {
       type: String
     },

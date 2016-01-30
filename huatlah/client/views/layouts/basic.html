@@ -1,7 +1,10 @@
 <template name="basicLayout">
     <div class="ui stackable grid container">
             {{> header}}
+            
+            {{#if currentUser}}
             {{> sidebar}}
+            {{/if}}
 
             {{> yield}}
             {{> footer}}

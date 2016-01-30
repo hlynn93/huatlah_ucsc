@@ -1,9 +1,14 @@
 Meteor.methods({
-  topup: function(Obj) {
+  topup: function(obj) {
     // Important server-side check for security and data integrity
-    check(Obj,customer);
+    check(obj,topupSchema);
 
-    
+    if( Meteor.userId())
+    {
+
+       Meteor.users.update(Meteor.userId(), {$set: {balance: obj.amount} });
+
+}
 
   }
 });

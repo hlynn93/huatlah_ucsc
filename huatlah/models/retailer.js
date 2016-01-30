@@ -2,6 +2,10 @@ retailer = new Mongo.Collection('retailer');
 
 retailer.attachSchema(
     new SimpleSchema({
+      customer_id:
+      {
+        type:Number
+      },
     name: {
       type: String
     },

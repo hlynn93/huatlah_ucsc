@@ -6,9 +6,18 @@
     <a class="item">
       Huat Lah!
     </a>
-    <a class="item">
+    {{#if currentUser}}
+
+    <a href="/dashboard" class="item">
+      <i class="home icon"></i> Dashboard
+    </a>
+
+    {{else}}
+    <a href="/" class="item">
       <i class="home icon"></i> Home
     </a>
+    {{/if}}
+
     <a class="item">
       <i class="sign in icon"></i> Login
     </a>

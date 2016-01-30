@@ -2,11 +2,11 @@ points = new Mongo.Collection('points');
 
 points.attachSchema(
     new SimpleSchema({
-    title: {
-      type: String
+    customer_id: {
+      type: Number
     },
-    content: {
-      type: String
+    points: {
+      type: Number
     },
     createdAt: {
       type: Date,
