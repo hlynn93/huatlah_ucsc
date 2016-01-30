@@ -6,13 +6,16 @@ transactions.attachSchema(
       type: String
     },
     totalAmount: {
-      type: Decimal
+      type: Number,
+      decimal:true
     },
     actualAmount: {
-      type: Decimal
+      type: Number,
+      decimal:true
     },
-    diffAmount: {
-      type: Decimal
+    actualAmount: {
+      type: Number,
+      decimal:true
     },
     createdAt: {
       type: Date,
