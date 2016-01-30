@@ -19,4 +19,14 @@ Meteor.methods({
         }
       });
   }
+  ,
+  updateProfile: function(obj)
+  {
+    check(obj,customer);
+    console.log(obj);
+    Meteor.users.update(Meteor.userId(),{$set:{ image_url:obj.image_url,name:obj.name,phone:obj.phone  }});
+
+
+  }
+
 });

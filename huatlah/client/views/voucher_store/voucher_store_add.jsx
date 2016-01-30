@@ -1,6 +1,6 @@
 Meteor.startup(function() {
   Uploader.finished = function(index, fileInfo, templateContext) {
-    $(".addVoucherButton").removeAttr("disabled");
+    $(".addVoucherButton").prop("disabled", false);
           $(".image_url").val(fileInfo.name);
   }
 });

@@ -1,18 +1,13 @@
 Meteor.startup(function() {
   Uploader.finished = function(index, fileInfo, templateContext) {
-    $(".updateButton").removeAttr("disabled");
-          $(".image_url").val(fileInfo.name);
+    $(".addVoucherButton").prop("disabled", false);
+
+    $(".image_url").val(fileInfo.name);
   }
 });
 
-Template.customerProfile.rendered=function ()
-{
-
-}
-
 Template.customerProfile.helpers({
   updateSchema: function() {
-    //SimpleSchema.debug = true;
     return customer;
   }
 });
