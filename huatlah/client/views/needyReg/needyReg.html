@@ -1,0 +1,12 @@
+<template name="needyReg">
+    <div class="twelve wide column">
+    {{#autoForm class="ui form" schema=registerSchema collection="needy" id="needyForm" type="method" meteormethod="needyRegister"}}
+      <legend>Beneficiary's Privileges</legend>
+      {{> afQuickField name="name" placeholder="Beneficiary's Name"}}
+      {{> afQuickField name="ssn" label="Social Security Number" placeholder="Social Security Number"}}
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    {{/autoForm}}
+    </div>
+  </template>

@@ -1,8 +1,10 @@
+// needy registration is based on customer.js as model.
+// if there is no use of this model, please delete it
+
 needy = new Mongo.Collection('needy');
 
-needy.attachSchema(
-    new SimpleSchema({
-      customer_id:
+needy.attachSchema(new SimpleSchema({
+    customer_id:
       {
         type:Number
       },
