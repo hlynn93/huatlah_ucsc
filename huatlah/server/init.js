@@ -6,7 +6,8 @@ Meteor.startup(function () {
     uploadPath = path + '/../../../../../public/images/people/';
   }
   else {
-    // linux hack
+    tmpPath = process.env.PWD + '/public/images/people/tmp';
+    uploadPath = process.env.PWD + '/public/images/people/';
   }
 
   UploadServer.init({
