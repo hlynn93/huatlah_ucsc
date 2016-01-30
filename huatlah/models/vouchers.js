@@ -5,6 +5,9 @@ voucherSchema = new SimpleSchema({
 name: {
   type: String
 },
+points: {
+  type: Number
+},
 quantity: {
   type: Number
 },

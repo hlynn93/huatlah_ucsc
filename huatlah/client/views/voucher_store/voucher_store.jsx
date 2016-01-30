@@ -6,12 +6,9 @@ Template.voucher_store.rendered=function ()
 Template.voucher_store.helpers({
   topupSchema_client: function() {
     return topupSchema;
-  }
-});
+  },
+  'vouchersList': function() {
+  return vouchers.find();
+}
 
-AutoForm.addHooks(['topupForm'],{
-    onSuccess: function(formType, result) {
-        alert("Successfully Topup!");
-        Router.go("dashboard");
-    }
 });

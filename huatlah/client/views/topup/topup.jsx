@@ -1,6 +1,7 @@
 Template.topup.rendered=function ()
 {
 
+      $('.amount').maskMoney();
 
   $( ".topupButton" ).click(function() {
 

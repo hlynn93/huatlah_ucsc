@@ -1,9 +1,9 @@
 <template name="dashboard">
-  {{#with currentUser}}
-      {{#with profile}}
+
 
   <div class="twelve wide column">
-
+    {{#with currentUser}}
+        {{#with profile}}
     <div class="ui two column stackable doubling grid">
       <div class="column">
         <div class="ui segment">
@@ -16,7 +16,6 @@
             </div>
           </div>
           <br />
-          {{> reactiveTable collection=points showNavigation='never' rowsPerPage=5}}
         </div>
       </div>
       <div class="column">
@@ -32,39 +31,30 @@
             </div>
           </div>
 
-          {{> reactiveTable collection=transactions showNavigation='never' rowsPerPage=5}}
         </div>
       </div>
 
     </div>
-
+    {{/with}}
+  {{/with}}
 
     <div class="twelve wide column">
       <div class="column">
         <div class="ui segment">
 
           <div class="ui four column stackable doubling grid featured_vouchers">
+            {{#each vouchersList}}
 
             <div class="column">
               <div class="ui segment">
-                <img src="/images/vouchers/sample_macdonald_voucher.png" />
+                <img src="/upload/{{image_url}}" />
+                <a href="/redeem/">
+                  <div class="ui green button">Redeem</div>
+                </a>
               </div>
             </div>
-            <div class="column">
-              <div class="ui segment">
-                <img src="/images/vouchers/sample_macdonald_voucher.png" />
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui segment">
-                <img src="/images/vouchers/sample_macdonald_voucher.png" />
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui segment">
-                <img src="/images/vouchers/sample_macdonald_voucher.png" />
-              </div>
-            </div>
+
+            {{/each}}
           </div>
 
           <a href="/vouchers">
@@ -75,7 +65,6 @@
       </div>
     </div>
   </div>
-  {{/with}}
-{{/with}}
+
 
 </template>

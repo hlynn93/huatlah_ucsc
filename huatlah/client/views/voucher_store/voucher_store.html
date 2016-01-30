@@ -5,20 +5,24 @@
 
 
     <div class="ui four column stackable doubling grid featured_vouchers">
-      {{#each vouchers}}
+      <div class="ui segment">
 
-      <div class="column">
-        <div class="ui segment">
-          <img src="/images/vouchers/sample_macdonald_voucher.png" />
-          <button class="redeem ui primary button">
-            Redeem
-          </button>
-          <button class="ui button">
-            Points {{points}}
-          </button>
+        <div class="ui four column stackable doubling grid featured_vouchers">
+          {{#each vouchersList}}
+
+          <div class="column">
+            <div class="ui segment">
+              <img src="/upload/{{image_url}}" />
+              <a href="/redeem/{{_id}}">
+                <div class="ui green button">Redeem</div>
+              </a>
+            </div>
+          </div>
+
+          {{/each}}
         </div>
+
       </div>
-      {{/each}}
 
     </div>
 

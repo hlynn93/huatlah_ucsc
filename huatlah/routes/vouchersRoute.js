@@ -14,3 +14,15 @@ Router.route('/add_voucher', {
     SEO.set({ title: 'Add Voucher - ' + Meteor.App.NAME });
   }
 });
+
+
+Router.route("redeem/:id", function() {
+  var id =  this.params.id;
+  var v = vouchers.find(id);
+var curUser = Meteor.users.findOne(this.userId);
+  Meteor.users.update(
+    curUser._id,
+    {$set: {"profile.rewardpoints": curUser.profile.rewardpoints - v.points} });
+
+
+}, { where: "server" });

@@ -1,6 +1,6 @@
 Meteor.startup(function () {
 
-  Meteor.subscribe("vouchersPubisher");
+  Meteor.subscribe("vouchersPublisher");
   Meteor.subscribe("transactionsPublisher");
 
 
