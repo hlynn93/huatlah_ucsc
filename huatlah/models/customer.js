@@ -1,6 +1,6 @@
-customerReg = new Mongo.Collection('customerReg');
+customer = new Mongo.Collection('customer');
 
-customerReg.attachSchema(
+customer.attachSchema(
     new SimpleSchema({
     name: {
       type: String
@@ -30,7 +30,7 @@ customerReg.attachSchema(
 );
 
 if (Meteor.isServer) {
-  customerReg.allow({
+  customer.allow({
     insert : function () {
       return true;
     },
