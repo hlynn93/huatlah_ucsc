@@ -1,0 +1,34 @@
+<template name="login">
+  <form id="login-form" action="action">
+  <div class="ui two column middle aligned very relaxed stackable grid">
+    <div class="column">
+      <div class="ui form">
+        <div class="field">
+          <label>Email</label>
+          <div class="ui left icon input">
+            <input type="text" id="login-email" placeholder="Email"/>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="ui left icon input">
+            <input type="password" id="login-password"/>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <input class="ui blue submit button" id="login-button" type="submit" name="Login" value="Login"/>
+      </div>
+    </div>
+    <div class="ui vertical divider">
+      Or
+    </div>
+    <div class="center aligned column">
+      <div class="ui big green labeled icon button">
+        <i class="signup icon"></i>
+          <a href="/register">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  </form>
+</template>

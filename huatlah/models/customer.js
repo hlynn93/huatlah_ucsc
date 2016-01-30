@@ -37,17 +37,19 @@ customer = new SimpleSchema({
 
     moneybalance: {
       type: Number,
-      optional: true,
+      optional: true
 
     },
 
-    // voucher_list: {
-    //   type: String
-    // },
-    //
-    // transaction_list: {
-    //   type: String
-    // },
+    voucher_list: {
+      type: String,
+      optional: true
+    },
+
+    transaction_list: {
+      type: String,
+      optional: true
+    },
 
   });
 
