@@ -1,13 +1,9 @@
 <template name="basicLayout">
-    <div class="ui grid container">
-        <header>
+    <div class="ui stackable grid container">
             {{> header}}
-        </header>
+            {{> sidebar}}
 
             {{> yield}}
-            {{> sidebar}}
-        <footer>
             {{> footer}}
-        </footer>
     </div>
 </template>
