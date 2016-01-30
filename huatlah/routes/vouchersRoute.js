@@ -16,13 +16,21 @@ Router.route('/add_voucher', {
 });
 
 
-Router.route("redeem/:id", function() {
+Router.route("/redeem/:id/:user_id", function() {
   var id =  this.params.id;
-  var v = vouchers.find(id);
-var curUser = Meteor.users.findOne(this.userId);
-  Meteor.users.update(
-    curUser._id,
-    {$set: {"profile.rewardpoints": curUser.profile.rewardpoints - v.points} });
+  var v = vouchers.findOne(id);
 
+  var user_id =  this.params.user_id;
+  var curUser = Meteor.users.findOne(user_id);
+  var profilePoints = curUser.profile.rewardpoints;
+
+  if(profilePoints > 0 && profilePoints >= v.points)
+  {
+      Meteor.users.update(user_id,{$set: {"profile.rewardpoints": profilePoints  - v.points} });
+  }
+  this.response.writeHead(302, {
+    'Location':  '/dashboard'
+  });
+  this.response.end();
 
 }, { where: "server" });

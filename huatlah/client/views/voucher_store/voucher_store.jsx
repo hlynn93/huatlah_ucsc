@@ -9,6 +9,10 @@ Template.voucher_store.helpers({
   },
   'vouchersList': function() {
   return vouchers.find();
+},
+'user_id': function()
+{
+  return Meteor.userId();
 }
 
 });

@@ -5,11 +5,14 @@ transactions.attachSchema(
     customer_id: {
       type: String
     },
-    title: {
-      type: String
+    totalAmount: {
+      type: Decimal
     },
-    content: {
-      type: String
+    actualAmount: {
+      type: Decimal
+    },
+    diffAmount: {
+      type: Decimal
     },
     createdAt: {
       type: Date,
