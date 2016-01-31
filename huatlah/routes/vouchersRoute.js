@@ -13,6 +13,8 @@ Router.route('/vouchers', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });
 
@@ -30,6 +32,8 @@ Router.route('/my_vouchers', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });
 
@@ -47,6 +51,8 @@ Router.route('/add_voucher', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });
 

@@ -13,5 +13,7 @@ Router.route('/topup', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });

@@ -1,15 +1,21 @@
 <template name="customerProfile">
     <div class="contentPage fourteen wide column">
+
+
+      <h2>
+        Update Profile
+      </h2>
+      <label style="font-weight:bold;">Profile Picture</label>
+
       {{> upload_semanticUI }}
 
     {{#autoForm class="ui form" schema=updateSchema id="customerProfileForm" type="method" meteormethod="updateProfile"}}
     <div class="field">
-      <label>Profile Picture</label>
       {{> afQuickField class="image_url" name="image_url" type="hidden"}}
     </div>
       {{> afQuickField name="name" placeholder="Your Name"}}
       {{> afQuickField name="phone" placeholder="Your Phone Number"}}
-      <button class="ui button addVoucherButton" disabled="disabled" type="submit">Update Profile</button>
+      <button class="ui button addVoucherButton" type="submit">Update Profile</button>
     {{/autoForm}}
     </div>
   </template>

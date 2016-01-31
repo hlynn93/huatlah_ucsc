@@ -13,5 +13,6 @@ Router.route('/dashboard', {
        Router.go('login');
      }
    }
+   this.next();
  }
 });

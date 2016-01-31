@@ -13,5 +13,7 @@ Router.route('/update_customer_profile', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });

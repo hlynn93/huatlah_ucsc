@@ -13,5 +13,7 @@ Router.route('/update_retailer_profile', {
        Router.go('login');
      }
    }
+   this.next();
+
  }
 });
