@@ -4,15 +4,15 @@
   <div class="two wide column" style="padding:0px;background:#34425A;">
     <div class="ui segment" style="padding:6px;background:none;border:none;box-shadow:none;">
 
-      <img class="ui small rounded image" style="display:block;margin:0 auto;padding-top:15px;" src="/upload/{{image_url}}" />
+      <img class="ui small rounded image profile-picture" style="display:block;margin:0 auto;padding-top:15px;" src="/upload/{{image_url}}" />
 
       <b style="margin-top:10px;text-align:center;display:block;color:#fff;">
         {{name}}
       </b>
 
-      <div class="ui link list">
+      <div class="ui link list sidebar-icons-list">
         {{#if isCustomer }}
-  <div class="active item">
+  <div class="active item icon-wrapper">
       <a href="/topup">
       <div class="ui sidebarButton">
         <i class="money icon"></i>
@@ -24,7 +24,7 @@
 
     {{#if isRetailer }}
 
-  <div class="item">
+  <div class="item icon-wrapper">
       <a href="/add_voucher">
       <div class="ui sidebarButton">
         <i class="add circle icon"></i>
@@ -37,7 +37,7 @@
 
   {{#if isCustomer }}
 
-  <div class="item">
+  <div class="item icon-wrapper">
       <a href="/my_vouchers">
       <div class="ui sidebarButton">
         <i class="add circle icon"></i>
@@ -50,10 +50,10 @@
 
 
   {{#if isCustomer }}
-  <div class="item">
+  <div class="item icon-wrapper">
       <a href="/update_customer_profile">
       <div class="ui sidebarButton">
-        <i class="add circle icon"></i>
+        <i class="user icon"></i>
         <br />
         Update Customer Profile
       </div>
@@ -63,7 +63,7 @@
 
   {{#if isRetailer }}
 
-  <div class="item">
+  <div class="item icon-wrapper">
       <a href="/update_retailer_profile">
       <div class="ui sidebarButton">
         <i class="add circle icon"></i>
@@ -75,7 +75,7 @@
   {{/if}}
 
 
-  <a class="item">
+  <a class="item icon-wrapper">
     <a class="logout" href="/logout">
     <div class="ui sidebarButton">
       <i class="sign out icon"></i>
