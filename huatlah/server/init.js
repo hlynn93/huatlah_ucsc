@@ -8,8 +8,8 @@ Meteor.startup(function () {
     uploadPath = path + '/../../../../../.uploads/';
   }
   else {
-    tmpPath = process.env.PWD + '/public/images/people/tmp';
-    uploadPath = process.env.PWD + '/public/images/people/';
+    tmpPath = process.env.PWD + '/.uploads/tmp';
+    uploadPath = process.env.PWD + '/.uploads//';
   }
 
   UploadServer.init({
