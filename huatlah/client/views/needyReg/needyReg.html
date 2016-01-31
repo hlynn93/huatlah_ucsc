@@ -1,15 +1,15 @@
 <template name="needyReg">
-    <div class="contentPage fourteen wide column">
+    <div class="contentPage fourteen wide column" style="padding:100px">
     {{#autoForm class="ui form" schema=needySchema id="needyForm" type="method" meteormethod="needyRegister"}}
-      <legend>Beneficiary's Privileges</legend>
-      {{> afQuickField name="name" placeholder="Beneficiary's Name"}}
-      {{> afQuickField name="ID_number" label="ID Number" placeholder="ID Number"}}
-      {{> afQuickField name="mailaddress" label="Mailing Address" placeholder="Mailing Address"}}
-      {{> afQuickField name="phone" label="Phone Number" placeholder="Phone Number"}}
-      {{> afQuickField name="email" label="Email Address" placeholder="Email Address"}}
+      <legend><h1>Beneficiary's Privileges</h1></legend><br />
+      {{> afQuickField name="name" label="Name" placeholder="Beneficiary's Name"}}<br />
+      {{> afQuickField name="ID_number" label="ID Number" placeholder="ID Number"}}<br />
+      {{> afQuickField name="mailaddress" label="Mailing Address" placeholder="Mailing Address"}}<br />
+      {{> afQuickField name="phone" label="Phone Number" placeholder="Phone Number"}}<br />
+      {{> afQuickField name="email" label="Email Address" placeholder="Email Address"}}<br />
 
       <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input class="ui blue submit button" id="retailer-register" type="submit" value="Register"/>
       </div>
     {{/autoForm}}
     </div>

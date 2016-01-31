@@ -1,13 +1,13 @@
 <template name="retailerReg">
-  <div class="contentPage fourteen wide column">
+  <div class="contentPage fourteen wide column" style="padding:100px">
   {{#autoForm class="ui form" schema=registerSchema id="retailerForm" type="method" meteormethod="retailerRegister"}}
-    <legend>Welcome Onboard!</legend>
-    {{> afQuickField name="email" label="Email" placeholder="Your Email"}}
-    {{> afQuickField name="phone" label="Phone Number" placeholder="Your Phone Number"}}
-    {{> afQuickField name="password" label="Password" type="password" placeholder="Your Password"}}
-    {{> afQuickField name="passwordConfirmation" label="Password Confirmation" type="password" placeholder="Your Password Again"}}
+    <legend><h1>Join Us Now!</h1></legend><br />
+    {{> afQuickField name="email" label="Email" placeholder="Your Email"}}<br />
+    {{> afQuickField name="phone" label="Phone Number" placeholder="Your Phone Number"}}<br />
+    {{> afQuickField name="password" label="Password" type="password" placeholder="Your Password"}}<br />
+    {{> afQuickField name="passwordConfirmation" label="Password Confirmation" type="password" placeholder="Your Password Again"}}<br />
     <div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <input class="ui blue submit button" id="retailer-register" type="submit" value="Register"/>
     </div>
   {{/autoForm}}
   </div>
