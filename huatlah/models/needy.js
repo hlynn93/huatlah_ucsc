@@ -3,7 +3,23 @@ needySchema = new SimpleSchema({
     name: {
       type: String
     },
-    ssn: {
+    phone: {
+      type: String,
+      decimal: false,
+      optional: true,
+      custom: function () {
+          if (this.value < 1000000000 || this.value > 9999999999)  {
+              return ("phoneMismatch");
+          }
+      }
+    },
+    mailaddress: {
+      type: String
+    },
+    ID_number: {
+      type: String
+    },
+    email:{
       type: String
     },
     coupon_quantity: {
@@ -41,3 +57,7 @@ if (Meteor.isServer) {
   Api.addCollection(needy);
 
 }
+
+needySchema.messages({
+"phoneMismatch": "Please input a valid phone number!",
+});

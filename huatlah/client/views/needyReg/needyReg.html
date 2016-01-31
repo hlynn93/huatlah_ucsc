@@ -3,7 +3,11 @@
     {{#autoForm class="ui form" schema=needySchema id="needyForm" type="method" meteormethod="needyRegister"}}
       <legend>Beneficiary's Privileges</legend>
       {{> afQuickField name="name" placeholder="Beneficiary's Name"}}
-      {{> afQuickField name="ssn" label="Social Security Number" placeholder="Social Security Number"}}
+      {{> afQuickField name="ID_number" label="ID Number" placeholder="ID Number"}}
+      {{> afQuickField name="mailaddress" label="Mailing Address" placeholder="Mailing Address"}}
+      {{> afQuickField name="phone" label="Phone Number" placeholder="Phone Number"}}
+      {{> afQuickField name="email" label="Email Address" placeholder="Email Address"}}
+
       <div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
