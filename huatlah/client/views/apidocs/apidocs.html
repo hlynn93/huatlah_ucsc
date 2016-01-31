@@ -1,0 +1,65 @@
+<template name="apidocs">
+    <div class="fourteen wide column apidocs-wrapper">
+      <div class="contentPage apidocs">
+        <div class="title">
+          <h2>API References</h2>
+        </div>
+        <div class="ui two column stackable doubling grid">
+          <div class="column">
+            <div class="ui styled accordion apirefs-wrapper">
+              <div class="title active">
+                <i class="dropdown icon"></i>
+                Get Users' Info
+              </div>
+              <div class="content active">
+                <p class="transition visible" style="display: block !important;">/api/users/ returns a json object of the users that are currently registered on the platform.
+                  This includes name, phone, reward points, and the balance</p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Get User's Info By Id
+              </div>
+              <div class="content">
+                <p class="transition hidden"><em>/api/users/:id</em> returns a json object of the users. This includes name, phone, reward points, and the balance</p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Get Transaction
+              </div>
+              <div class="content">
+                <p><em>/api/transactions/</em> returns a json object of the transactions happened. This includes the user id of the person who made those transactions, the total rounded amount, and the actual amount</p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Get Transaction by Id
+              </div>
+              <div class="content">
+                <p> <em>/api/transactions/:id</em> returns a json object of the transaction happened. This includes the user id of the person who made the transaction, the total rounded amount, and the actual amount</p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Add Transaction
+              </div>
+              <div class="content">
+                <p> <em>/users/addTransaction/:id</em> updates the user balance and reward points of the latest transaction. The required fields are { moneybalance (the amount spent), rewardpoints ( the amount of reward points receivied)} </p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Add Balance
+              </div>
+              <div class="content">
+                <p> <em>/users/addBalance/:id</em> deposits the money into the user balance. The required field is { moneybalance (the amount deposited)} </p>
+              </div>
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Get Meal
+              </div>
+              <div class="content">
+                  <p> <em>/needy/getMeal/:id</em> returns whether the person has coupons left and be able to receive meals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>
