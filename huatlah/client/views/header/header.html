@@ -1,13 +1,16 @@
 <template name="header">
-  <div class="sixteen wide column" style="padding:0px;">
+  <div class="sixteen wide column header-wrapper" style="padding:0px;">
 
   <div class="ui attached stackable menu">
   <div class="ui container">
-    <a class="item" href="/dashboard" style="background:#ff9100;color:#fff;">
-      <b style="font-size:25.5px;">
-      Huat Lah!
-    </b>
-    </a>
+
+      <a class="item header-logo" href="/dashboard" style="background:#ff9100;color:#fff;">
+        <b style="font-size:26px; line-height: 32px;">
+        Huat Lah!
+      </b>
+      </a>
+
+
     {{#if currentUser}}
 
     <a href="/dashboard" class="item">
@@ -19,23 +22,26 @@
       <i class="home icon"></i> Home
     </a>
     {{/if}}
+
+    <div class="header-right">
     {{#if currentUser}}
     {{else}}
-    <a class="item" href="/login">
-      <i class="sign in icon"></i> Login
-    </a>
-    {{/if}}
 
+      <a class="item" href="/login">
+        <i class="sign in icon"></i> Login
+      </a>
+    {{/if}}
 
     <div class="ui simple dropdown item">
       <a href="/register">
       Sign Up!
     </a>
       <i class="dropdown icon"></i>
-      <div class="menu">
+      <div class="menu header-signup-dropdown">
         <a href="register" class="item"><i class="user icon"></i>Customer</a>
         <a href="retailerRegistration" class="item"><i class="user icon"></i>Retailer</a>
         <a href="needyRegistration" class="item"><i class="doctor icon"></i>Needy</a>
+
       </div>
     </div>
   </div>
