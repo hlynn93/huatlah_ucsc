@@ -7,8 +7,8 @@ Meteor.startup(function() {
   }
 });
 
-Template.customerProfile.helpers({
-  updateSchema: function() {
+Template.retailerProfile.helpers({
+  retailSchema: function() {
     return customer;
   }
 });

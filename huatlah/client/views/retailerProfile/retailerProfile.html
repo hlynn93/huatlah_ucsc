@@ -2,7 +2,7 @@
   <div class="contentPage fourteen wide column">
     {{> upload_semanticUI }}
 
-  {{#autoForm class="ui form" schema=updateSchema id="retailerProfileForm" type="method" meteormethod="updateProfile"}}
+  {{#autoForm class="ui form" schema=retailSchema id="retailerProfileForm" type="method" meteormethod="updateProfile"}}
   <div class="field">
     <label>Profile Picture</label>
     {{> afQuickField class="image_url" name="image_url" type="hidden"}}
