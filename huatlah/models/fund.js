@@ -3,7 +3,8 @@ fund = new Mongo.Collection('fund');
 fund.attachSchema(
     new SimpleSchema({
     amount: {
-      type: Number
+      type: Number,
+      decimal:true
     },
   })
 );

@@ -5,6 +5,17 @@ Template.dashboard.rendered=function ()
 
 
 Template.dashboard.helpers({
+  createdAtFormatted: function () {
+  return moment(this.createdAt).format('DD/MM/YYYY');
+},
+  getPoints:function()
+  {
+    return points.find({} ,{limit: 3});
+  },
+  getTransactions:function()
+  {
+    return transactions.find({} ,{limit: 3});
+  },
   isAdmin:function()
   {
     return (Meteor.user().profile.type == "4")
@@ -23,22 +34,7 @@ Template.dashboard.helpers({
     'latestVouchers': function() {
     return JSON.parse(Meteor.user().profile.voucher_list);
   },
-  settings: function () {
-    return {
-        collection: transactions,
-        rowsPerPage: 3,
-        showFilter: false,
-        fields: [ 'actualAmount', 'diffAmount','createdAt']
-    };
-},
-  pointsSetting: function () {
-    return {
-        collection: points,
-        rowsPerPage: 3,
-        showFilter: false,
-        fields: ['points','createdAt']
-    };
-},
+
 
     'user_id': function()
     {

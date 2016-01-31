@@ -8,15 +8,27 @@ Router.route( "users/addTransaction/:id", { where: "server" } )
   .put( function() {
       var user_id = this.params.id;
       var data=  this.request.body;
+      console.log(JSON.stringify(data));
       var moneydiff = Number(data.moneybalance);
+      var roundedDiff = Math.ceil(moneydiff);
+      moneydiff = roundedDiff - moneydiff;
+
       var pointsdiff = Number(data.rewardpoints);
       var user =  Meteor.users.findOne(user_id);
 
-      var var_money = user.profile.moneybalance - moneydiff;
+      var var_money = user.profile.moneybalance - roundedDiff;
       var var_points = user.profile.rewardpoints + pointsdiff;
 
       Meteor.users.update(user_id,{$set:{"profile.moneybalance":var_money,"profile.rewardpoints": var_points}});
       points.insert({"customer_id":user_id,points:pointsdiff,"createdAt":new Date().valueOf()});
+
+      var fundObj = fund.findOne("1");
+      console.log(fundObj.amount  +" : "+  moneydiff);
+      var totalAmt = fundObj.amount + moneydiff;
+      console.log(totalAmt);
+      fund.update("1",{$set:{"amount": totalAmt  }});
+
+
       this.response.setHeader( 'access-control-allow-origin', '*' );
       this.response.statusCode = 200;
       this.response.end();

@@ -17,7 +17,33 @@
               {{rewardpoints}}
             </div>
           </div>
-          {{> reactiveTable class="ui celled table" settings=pointsSetting}}
+
+          <table class="ui table">
+            <tr>
+              <td>
+                Points
+              </td>
+              <td>
+                Date
+              </td>
+            </tr>
+          {{#each getPoints}}
+          <tr>
+            <td>
+            {{points}}
+          </td>
+          <td>
+            {{createdAtFormatted}}
+          </td>
+        </tr>
+          {{/each}}
+        </table>
+
+          <div class="align-right">
+            <a href="pointsHistory">
+            View point history
+          </a>
+          </div>
         </div>
       </div>
       <div class="column">
@@ -32,7 +58,46 @@
               {{moneybalance}}
             </div>
           </div>
-          {{> reactiveTable class="ui celled table" settings=settings}}
+
+          <table class="ui table">
+            <tr>
+              <td>
+                Total Amount
+              </td>
+              <td>
+                Paid Amount
+              </td>
+              <td>
+                Differences
+              </td>
+              <td>
+                Date
+              </td>
+            </tr>
+          {{#each getTransactions}}
+          <tr>
+            <td>
+            {{totalAmount}}
+          </td>
+          <td>
+            {{actualAmount}}
+          </td>
+          <td>
+            {{diffAmount}}
+          </td>
+          <td>
+            {{createdAtFormatted}}
+          </td>
+        </tr>
+          {{/each}}
+        </table>
+
+
+          <div class="align-right">
+            <a href="transactionsHistory">
+            View transaction history
+          </a>
+          </div>
         </div>
       </div>
 
