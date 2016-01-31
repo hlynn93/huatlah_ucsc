@@ -47,3 +47,4 @@ yogiben:autoform-file
 tomi:upload-server
 tomi:upload-jquery
 cfs:filesystem
+momentjs:moment

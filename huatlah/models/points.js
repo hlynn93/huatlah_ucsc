@@ -3,7 +3,7 @@ points = new Mongo.Collection('points');
 points.attachSchema(
     new SimpleSchema({
     customer_id: {
-      type: Number
+      type: String
     },
     points: {
       type: Number
