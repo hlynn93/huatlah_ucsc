@@ -21,6 +21,23 @@
               </div>
               <div class="content">
                 <p class="transition hidden"><em>/api/users/:id</em> returns a json object of the users. This includes name, phone, reward points, and the balance</p>
+                <xmp>
+{
+    "status": "success",
+    "data": {
+        "_id": "j85BNTzsjHerAMFbj",
+        "profile": {
+            "name": "",
+            "phone": "5534567890",
+            "voucher_repo": "",
+            "oldpassword": "",
+            "image_url": "blank_image.png",
+            "type": "2",
+            "voucher_list": "[{\"name\":\"amazon\",\"points\":10,\"image_url\":\"a_generic.jpg\",\"quantity\":10,\"expire\":\"1912-12-02T08:00:00.000Z\"}]"
+        }
+    }
+}
+                </xmp>
               </div>
               <div class="title">
                 <i class="dropdown icon"></i>
@@ -35,6 +52,19 @@
               </div>
               <div class="content">
                 <p> <em>/api/transactions/:id</em> returns a json object of the transaction happened. This includes the user id of the person who made the transaction, the total rounded amount, and the actual amount</p>
+                <xmp>
+{
+  "status": "success",
+  "data": {
+      "_id": "7x4LFnrmX3Ayj75yf",
+      "customer_id": "G3bRhpS7nnyyFnnRo",
+      "totalAmount": 26,
+      "actualAmount": 25.22,
+      "diffAmount": 0.7800000000000011,
+      "createdAt": "2016-01-31T17:03:52.003Z"
+  }
+}
+                </xmp>
               </div>
               <div class="title">
                 <i class="dropdown icon"></i>
