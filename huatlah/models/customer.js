@@ -24,7 +24,7 @@ customer = new SimpleSchema({
 
     image_url: {
       type: String,
-      optional: true
+      optional:true
     },
 
     oldpassword: {
@@ -33,7 +33,8 @@ customer = new SimpleSchema({
     },
 
     password: {
-      type: String
+      type: String,
+      optional:true
     },
 
     passwordConfirmation: {
@@ -43,7 +44,8 @@ customer = new SimpleSchema({
             if (this.value !== this.field('password').value) {
                 return ("passwordMismatch");
             }
-        }
+        },
+        optional:true
     },
 
     rewardpoints: {

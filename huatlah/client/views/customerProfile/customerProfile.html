@@ -1,9 +1,10 @@
 <template name="customerProfile">
     <div class="contentPage fourteen wide column">
-    {{#autoForm class="ui form" schema=updateSchema id="customerForm" type="method" meteormethod="updateProfile"}}
+      {{> upload_semanticUI }}
+
+    {{#autoForm class="ui form" schema=updateSchema id="customerProfileForm" type="method" meteormethod="updateProfile"}}
     <div class="field">
       <label>Profile Picture</label>
-      {{> upload_semanticUI}}
       {{> afQuickField class="image_url" name="image_url" type="hidden"}}
     </div>
       {{> afQuickField name="name" placeholder="Your Name"}}

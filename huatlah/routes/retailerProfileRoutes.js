@@ -1,5 +1,5 @@
 // Register Route
-Router.route('/retailerprofile', {
+Router.route('/update_retailer_profile', {
   name: 'retailerprofile',
   action: function () {
     this.render('retailerProfile');

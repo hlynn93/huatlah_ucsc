@@ -41,8 +41,7 @@ Router.route( "users/addBalance/:id", { where: "server" } )
       var user =  Meteor.users.findOne(user_id);
 
       var var_money = user.profile.moneybalance + moneydiff;
-      console.log(moneydiff);
-      console.log(var_money);
+
 
       Meteor.users.update(user_id,{$set:{"profile.moneybalance":var_money}});
       this.response.setHeader( 'access-control-allow-origin', '*' );

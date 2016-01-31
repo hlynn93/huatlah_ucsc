@@ -14,6 +14,7 @@ Meteor.methods({
             voucher_repo: "",
             image_url: "",
             oldpassword: "",
+            image_url:"blank_image.png",
             // 1: customers, 2: retailers
             type: '2',
         }

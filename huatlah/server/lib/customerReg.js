@@ -1,10 +1,8 @@
 Meteor.methods({
   customerRegister: function(Obj) {
-    // Important server-side check for security and data integrity
     check(Obj,customer);
 
-    // Create a new user into Meteor.users
-    //https://github.com/aldeed/meteor-autoform#a-basic-insert-form
+
     Accounts.createUser({
     email: Obj.email,
     password: Obj.password,
@@ -14,6 +12,7 @@ Meteor.methods({
             rewardpoints: 0,
             moneybalance: 0,
             oldpassword: "",
+            image_url:"blank_image.png",
             // 1: customers, 2: retailers, 3: needy
             type: '1',
         }
@@ -23,8 +22,8 @@ Meteor.methods({
   updateProfile: function(obj)
   {
     check(obj,customer);
-    console.log(obj);
-    Meteor.users.update(Meteor.userId(),{$set:{ image_url:obj.image_url,name:obj.name,phone:obj.phone  }});
+
+    Meteor.users.update(Meteor.userId(),{$set:{ "profile.image_url":obj.image_url,"profile.name":obj.name,"profile.phone":obj.phone  }});
 
 
   }

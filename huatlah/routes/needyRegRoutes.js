@@ -1,5 +1,5 @@
 // Register Route
-Router.route('/needyregistration', {
+Router.route('/needyRegistration', {
   name: 'needy',
   action: function () {
     this.render('needyReg');

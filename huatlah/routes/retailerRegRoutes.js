@@ -1,5 +1,5 @@
 // Register Route
-Router.route('/welcome_onboard', {
+Router.route('/retailerRegistration', {
   name: 'retailer',
   action: function () {
     this.render('retailerReg');
