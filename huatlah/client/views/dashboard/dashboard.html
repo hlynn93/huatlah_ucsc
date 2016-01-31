@@ -86,8 +86,42 @@
       {{#if isRetailer }}
 
         <h2>
-          Vouchers
-      </h2>
+          Latest Vouchers Redeemed
+        </h2>
+
+        {{#each latestVouchers}}
+            <div class="card voucherCard">
+              <div class="image">
+                <img src="/upload/{{image_url}}" />
+              </div>
+              <div class="content" style="text-align:center;display:block;">
+                <div class="header">{{name}}</div>
+                <div class="meta">
+                  <a>Voucher</a>
+                </div>
+                <div class="description">
+                  <b style="font-size:26px;color:#2689a8;">
+                    Redeem with <br />
+                    {{points}} points
+                  </b>
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+
+                  <a href="/redeem/{{_id}}/{{user_id}}">
+                  <div class="ui green button">Redeem</div>
+                </a>
+
+                </span>
+                <span>
+                  <i class="user icon"></i>
+                  {{quantity}} Vouchers Left
+                </span>
+              </div>
+            </div>
+        {{/each}}
+
 
 
       {{/if}}

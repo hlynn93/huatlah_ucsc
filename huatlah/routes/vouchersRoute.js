@@ -79,7 +79,6 @@ Router.route("/redeem/:id/:user_id", function() {
     jsonArray = JSON.stringify(jsonArray);
 
 
-    console.log(jsonArray);
 
       Meteor.users.update(user_id,{$set: {"profile.rewardpoints": profilePoints  - v.points,"profile.voucher_list": jsonArray }});
       vouchers.update(id,{$set: {"quantity": v.quantity - 1 } });

@@ -25,12 +25,12 @@ Meteor.methods({
 
     if(obj.image_url)
     {
-    Meteor.users.update(Meteor.userId(),{$set:{ "profile.image_url":obj.image_url,"profile.name":obj.name,"profile.phone":obj.phone  }});
-  }
-  else {
-    Meteor.users.update(Meteor.userId(),{$set:{"profile.name":obj.name,"profile.phone":obj.phone  }});
-
-  }
+        Meteor.users.update(Meteor.userId(),{$set:{ "profile.image_url":obj.image_url,"profile.name":obj.name,"profile.phone":obj.phone  }});
+    }
+    else
+    {
+        Meteor.users.update(Meteor.userId(),{$set:{"profile.name":obj.name,"profile.phone":obj.phone }});
+    }
 
   }
 

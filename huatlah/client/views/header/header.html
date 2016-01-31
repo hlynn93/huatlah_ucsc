@@ -32,6 +32,8 @@
       </a>
     {{/if}}
 
+    {{#if currentUser}}
+    {{else}}
     <div class="ui simple dropdown item">
       <a href="/register">
       Sign Up!
@@ -43,8 +45,22 @@
         <a href="needyRegistration" class="item"><i class="doctor icon"></i>Needy</a>
       </div>
     </div>
+    {{/if}}
+
+    {{#if isAdmin}}
+
+    <div class="ui simple dropdown item">
+      <a href="/needyRegistration">
+      Register Needy
+    </a>
+    </div>
+
+    {{/if}}
+
+
   </div>
   </div>
+</div>
 </div>
 </div>
 </template>

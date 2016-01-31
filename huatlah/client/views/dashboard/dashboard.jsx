@@ -20,6 +20,9 @@ Template.dashboard.helpers({
     'vouchersList': function() {
     return vouchers.find();
   },
+    'latestVouchers': function() {
+    return JSON.parse(Meteor.user().profile.voucher_list);
+  },
   settings: function () {
     return {
         collection: transactions,
