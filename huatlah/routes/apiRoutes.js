@@ -52,3 +52,26 @@ Router.route( "users/addBalance/:id", { where: "server" } )
   .delete( function() {
    // If a DELETE request is made, delete the user's profile.
   });
+
+  Router.route( "needy/getMeal/:id", { where: "server" } )
+    .get( function() {
+      var needy_id = this.params.id;
+
+      var needyUser =  needy.findOne(needy_id);
+      console.log(JSON.stringify(needyUser));
+      var meal_count = needyUser.coupon_quantity - 1;
+      needy.update(needy_id,{$set:{"coupon_quantity": meal_count}});
+      this.response.setHeader( 'access-control-allow-origin', '*' );
+      this.response.statusCode = 200;
+      this.response.end();
+    })
+    .post( function() {
+      // If a POST request is made, create the user's profile.
+    })
+    .put( function() {
+
+
+    })
+    .delete( function() {
+     // If a DELETE request is made, delete the user's profile.
+    });

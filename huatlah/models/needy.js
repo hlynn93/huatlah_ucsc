@@ -3,9 +3,6 @@ needySchema = new SimpleSchema({
     name: {
       type: String
     },
-    ssn: {
-      type: String
-    },
     coupon_quantity: {
       type: Number,
       optional:true
