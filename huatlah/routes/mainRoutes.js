@@ -5,4 +5,12 @@ Router.route('/', {
     this.render('home');
     SEO.set({ title: 'Home - ' + Meteor.App.NAME });
   }
+  ,
+  onBeforeAction: function () {
+   if ( Meteor.user()) {
+       Router.go("dashboard");
+     
+   }
+   this.next();
+ }
 });
