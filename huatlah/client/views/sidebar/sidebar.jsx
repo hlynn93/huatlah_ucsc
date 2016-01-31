@@ -20,6 +20,10 @@ Template.sidebar.helpers({
   {
     return fund.findOne("1").amount.toFixed(2);
   },
+  emailAddress:function()
+  {
+    return Meteor.user().emails[0].address;
+  },
   getTypePerson:function()
   {
     var type = Meteor.user().profile.type;
