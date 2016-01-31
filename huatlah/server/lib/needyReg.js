@@ -7,8 +7,11 @@ Meteor.methods({
     //https://github.com/aldeed/meteor-autoform#a-basic-insert-form
     needy.insert({
       name: Obj.name,
-      ssn: Obj.ssn,
-      coupon_quantity: 3,
+      mailaddress: Obj.mailaddress,
+      phone: Obj.phone,
+      ID_number: Obj.ID_number,
+      email: Obj.email,
+      coupon_quantity: 3
 
       });
   }
