@@ -17,7 +17,7 @@ needySchema = new SimpleSchema({
       type: String
     },
     ID_number: {
-      type: string
+      type: String
     },
     email:{
       type: String
@@ -58,6 +58,6 @@ if (Meteor.isServer) {
 
 }
 
-needy.messages({
+needySchema.messages({
 "phoneMismatch": "Please input a valid phone number!",
 });
