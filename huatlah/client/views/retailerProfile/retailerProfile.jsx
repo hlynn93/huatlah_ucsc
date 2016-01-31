@@ -1,16 +1,19 @@
-Template.retailerProfile.rendered=function ()
-{
 
-}
 
-Template.retailerProfile.helpers({
+Meteor.startup(function() {
+  Uploader.finished = function(index, fileInfo, templateContext) {
+    $(".addVoucherButton").prop("disabled", false);
+    $(".image_url").val(fileInfo.name);
+  }
+});
+
+Template.customerProfile.helpers({
   updateSchema: function() {
-    //SimpleSchema.debug = true;
     return customer;
   }
 });
 
-AutoForm.addHooks(['retailerForm'],{
+AutoForm.addHooks(['retailerProfileForm'],{
     onSuccess: function(formType, result) {
         Router.go("dashboard");
     }
