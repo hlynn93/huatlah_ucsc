@@ -87,7 +87,7 @@ Router.route("/redeem/:id/:user_id", function() {
 
   }
   this.response.writeHead(302, {
-    'Location':  '/dashboard'
+    'Location':  '/my_vouchers'
   });
   this.response.end();
 

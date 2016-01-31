@@ -1,6 +1,5 @@
 Template.dashboard.rendered=function ()
 {
-  $(".balance").money();
 }
 
 
@@ -12,6 +11,10 @@ Template.dashboard.helpers({
   {
     return points.find({"customer_id":Meteor.userId()} ,{sort: {'createdAt' : -1}, limit:3 });
   },
+  transactionDiffAmount: function () { return this.diffAmount.toFixed(2); },
+  getMoneyBalance: function () { return this.moneybalance.toFixed(2); },
+  getTotalRetailVouchers: function () {     return JSON.parse(Meteor.user().profile.voucher_list).length; },
+
   getTransactions:function()
   {
     return transactions.find({"customer_id":Meteor.userId()} ,{sort: {'createdAt' : -1}, limit:3 });

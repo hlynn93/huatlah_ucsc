@@ -18,15 +18,17 @@
             </div>
           </div>
 
-          <table class="ui table">
+          <table class="ui orange table">
+            <thead>
             <tr>
-              <td>
+              <th>
                 Points
-              </td>
-              <td>
+              </th>
+              <th>
                 Date
-              </td>
+              </th>
             </tr>
+          </thead>
           {{#each getPoints}}
           <tr>
             <td>
@@ -54,36 +56,38 @@
             <div class="label">
               Balance
             </div>
-            <div class="value balance">
-              {{moneybalance}}
+            <div class="value">
+              ${{getMoneyBalance}}
             </div>
           </div>
 
-          <table class="ui table">
+          <table class="ui orange table">
+            <thead>
             <tr>
-              <td>
+              <th>
                 Total Amount
-              </td>
-              <td>
+              </th>
+              <th>
                 Paid Amount
-              </td>
-              <td>
+              </th>
+              <th>
                 Differences
-              </td>
-              <td>
+              </th>
+              <th>
                 Date
-              </td>
+              </th>
             </tr>
+          </thead>
           {{#each getTransactions}}
           <tr>
             <td>
-            {{totalAmount}}
+            ${{totalAmount}}
           </td>
           <td>
-            {{actualAmount}}
+            ${{actualAmount}}
           </td>
           <td>
-            {{diffAmount}}
+            ${{transactionDiffAmount}}
           </td>
           <td>
             {{createdAtFormatted}}
@@ -109,9 +113,13 @@
   <div class="ui fourteen column">
 
     {{#if isCustomer }}
+    <div class="row">
+    <h2 class="ui header" style="padding:10px;">
+      Featured Vouchers
+    </h2>
+  </div>
 
             <div class="ui link cards featured_vouchers">
-
             {{#each vouchersList}}
                 <div class="card voucherCard">
                   <div class="image">
@@ -163,7 +171,7 @@
                 Total Vouchers
               </div>
               <div class="value">
-                753
+                {{getTotalRetailVouchers}}
               </div>
             </div>
 

@@ -5,9 +5,18 @@
     <div class="ui segment" style="padding:6px;background:none;border:none;box-shadow:none;">
 
       <img class="ui small rounded image profile-picture" style="display:block;margin:0 auto;padding-top:15px;" src="/upload/{{image_url}}" />
+      {{#if isAdmin}}
+      <b style="margin-top:10px;text-align:center;display:block;color:#fff;">
+          Total Central Fund : ${{getFund}}
+      </b>
+      {{/if}}
 
       <b style="margin-top:10px;text-align:center;display:block;color:#fff;">
         {{name}}
+      </b>
+      <br />
+      <b style="margin-top:10px;text-align:center;display:block;color:#fff;">
+        I am {{getTypePerson}}
       </b>
 
       <div class="ui link list sidebar-icons-list">

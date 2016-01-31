@@ -16,6 +16,35 @@ Template.sidebar.helpers({
   {
     return (Meteor.user().profile.type == "2")
   },
+  getFund:function()
+  {
+    return fund.findOne("1").amount.toFixed(2);
+  },
+  getTypePerson:function()
+  {
+    var type = Meteor.user().profile.type;
+
+    if(type == "1")
+    {
+      return "Customer";
+    }
+    else if(type == "2")
+    {
+      return "Retailer";
+
+    }
+    else if(type == "3")
+    {
+      return "";
+
+    }
+    else if(type == "4")
+    {
+      return "Administrator";
+
+    }
+
+  },
 
 });
 
