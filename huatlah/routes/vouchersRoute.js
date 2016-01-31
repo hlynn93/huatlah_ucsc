@@ -7,6 +7,14 @@ Router.route('/vouchers', {
   }
 });
 
+Router.route('/my_vouchers', {
+  name: 'my_vouchers',
+  action: function () {
+    this.render('my_voucher');
+    SEO.set({ title: 'My Vouchers - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/add_voucher', {
   name: 'add_voucher',
   action: function () {
@@ -26,8 +34,25 @@ Router.route("/redeem/:id/:user_id", function() {
 
   if(profilePoints > 0 && profilePoints >= v.points && v.quantity > 0)
   {
-      Meteor.users.update(user_id,{$set: {"profile.rewardpoints": profilePoints  - v.points} });
+    var jsonArray = [];
+    if(curUser.profile.voucher_list)
+    {
+      jsonArray = JSON.parse(curUser.profile.voucher_list);
+      jsonArray.push(v);
+    }
+    else {
+      jsonArray.push(v);
+    }
+    jsonArray = JSON.stringify(jsonArray);
+
+
+    console.log(jsonArray);
+
+      Meteor.users.update(user_id,{$set: {"profile.rewardpoints": profilePoints  - v.points,"profile.voucher_list": jsonArray }});
       vouchers.update(id,{$set: {"quantity": v.quantity - 1 } });
+
+
+
   }
   this.response.writeHead(302, {
     'Location':  '/dashboard'

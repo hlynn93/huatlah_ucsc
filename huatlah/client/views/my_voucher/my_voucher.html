@@ -1,0 +1,43 @@
+<template name="my_voucher">
+
+  <div class="contentPage fourteen wide column">
+
+
+    <h1>
+      My Vouchers
+    </h1>
+
+    <div class="ui link cards featured_vouchers">
+
+    {{#each myVouchers}}
+        <div class="card voucherCard">
+          <div class="image">
+            <img src="/upload/{{image_url}}" />
+          </div>
+          <div class="content" style="text-align:center;display:block;">
+            <div class="header">{{name}}</div>
+            <div class="meta">
+              <a>Redeemed Vouchers</a>
+            </div>
+            <div class="description">
+              <b style="font-size:26px;color:#2689a8;">
+                Redeemed with <br />
+                {{points}} points
+              </b>
+            </div>
+          </div>
+          <div class="extra content">
+            <span class="right floated">
+
+            </span>
+          </div>
+        </div>
+    {{/each}}
+    </div>
+
+
+  </div>
+
+
+
+</template>

@@ -1,5 +1,5 @@
 <template name="retailerProfile">
-  <div class="twelve wide column">
+  <div class="contentPage fourteen wide column">
   {{#autoForm class="ui form" schema=updateSchema id="retailerForm" collection="Meteor.users" doc=currentUser type="update"}}
     <legend>Your Profile</legend>
     {{> afQuickField name="name" placeholder="Your Name"}}

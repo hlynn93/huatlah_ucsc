@@ -1,14 +1,12 @@
 <template name="dashboard">
 
-
-
   <div class="contentPage fourteen wide column">
     {{#with currentUser}}
         {{#with profile}}
     <div class="ui two column stackable doubling grid">
       <div class="column">
         <div class="ui segment">
-          <div class="ui statistic">
+          <div class="ui statistic" style="text-align:center;margin:0 auto; display:block;width:100%;max-width:100%;">
             <div class="label">
               Points
             </div>
@@ -16,14 +14,14 @@
               {{rewardpoints}}
             </div>
           </div>
-          <br />
+          {{> reactiveTable class="ui celled table" settings=pointsSetting}}
         </div>
       </div>
       <div class="column">
 
         <div class="ui segment">
 
-          <div class="ui statistic">
+          <div class="ui statistic" style="text-align:center;margin:0 auto; display:block;width:100%;max-width:100%;">
             <div class="label">
               Balance
             </div>

@@ -1,8 +1,6 @@
 Template.dashboard.rendered=function ()
 {
-
-$(".balance").money();
-
+  $(".balance").money();
 }
 
 
@@ -17,6 +15,14 @@ Template.dashboard.helpers({
         rowsPerPage: 3,
         showFilter: false,
         fields: [ 'actualAmount', 'diffAmount','createdAt']
+    };
+},
+  pointsSetting: function () {
+    return {
+        collection: points,
+        rowsPerPage: 3,
+        showFilter: false,
+        fields: ['points','createdAt']
     };
 },
 
