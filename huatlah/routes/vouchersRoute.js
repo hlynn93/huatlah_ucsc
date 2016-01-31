@@ -4,7 +4,16 @@ Router.route('/vouchers', {
   action: function () {
     this.render('voucher_store');
     SEO.set({ title: 'Grab your Vouchers - ' + Meteor.App.NAME });
-  }
+  },
+  onBeforeAction: function () {
+   if (! Meteor.user()) {
+     if (Meteor.loggingIn()) {
+     }
+     else{
+       Router.go('login');
+     }
+   }
+ }
 });
 
 Router.route('/my_vouchers', {
@@ -12,7 +21,16 @@ Router.route('/my_vouchers', {
   action: function () {
     this.render('my_voucher');
     SEO.set({ title: 'My Vouchers - ' + Meteor.App.NAME });
-  }
+  },
+  onBeforeAction: function () {
+   if (! Meteor.user()) {
+     if (Meteor.loggingIn()) {
+     }
+     else{
+       Router.go('login');
+     }
+   }
+ }
 });
 
 Router.route('/add_voucher', {
@@ -20,7 +38,16 @@ Router.route('/add_voucher', {
   action: function () {
     this.render('voucher_store_add');
     SEO.set({ title: 'Add Voucher - ' + Meteor.App.NAME });
-  }
+  },
+  onBeforeAction: function () {
+   if (! Meteor.user()) {
+     if (Meteor.loggingIn()) {
+     }
+     else{
+       Router.go('login');
+     }
+   }
+ }
 });
 
 

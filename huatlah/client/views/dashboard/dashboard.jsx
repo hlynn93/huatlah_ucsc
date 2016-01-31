@@ -5,7 +5,18 @@ Template.dashboard.rendered=function ()
 
 
 Template.dashboard.helpers({
-
+  isAdmin:function()
+  {
+    return (Meteor.user().profile.type == "4")
+  },
+  isCustomer:function()
+  {
+    return (Meteor.user().profile.type == "1")
+  },
+  isRetailer:function()
+  {
+    return (Meteor.user().profile.type == "2")
+  },
     'vouchersList': function() {
     return vouchers.find();
   },

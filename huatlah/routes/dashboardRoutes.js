@@ -4,5 +4,14 @@ Router.route('/dashboard', {
   action: function () {
     this.render('dashboard');
     SEO.set({ title: 'Dashboard - ' + Meteor.App.NAME });
-  }
+  },
+  onBeforeAction: function () {
+   if (! Meteor.user()) {
+     if (Meteor.loggingIn()) {
+     }
+     else{
+       Router.go('login');
+     }
+   }
+ }
 });

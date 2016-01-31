@@ -3,6 +3,9 @@
   <div class="contentPage fourteen wide column">
     {{#with currentUser}}
         {{#with profile}}
+
+        {{#if isCustomer }}
+
     <div class="ui two column stackable doubling grid">
       <div class="column">
         <div class="ui segment">
@@ -34,10 +37,13 @@
       </div>
 
     </div>
+
+    {{/if}}
     {{/with}}
   {{/with}}
   <div class="ui fourteen column">
 
+    {{#if isCustomer }}
 
             <div class="ui link cards featured_vouchers">
 
@@ -74,6 +80,18 @@
                 </div>
             {{/each}}
       </div>
+      {{/if}}
+
+
+      {{#if isRetailer }}
+
+      
+      {{/if}}
+
+
+
+
+
     </div>
 
   </div>

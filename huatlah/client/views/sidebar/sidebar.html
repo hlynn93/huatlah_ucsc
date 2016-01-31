@@ -11,6 +11,7 @@
       </b>
 
       <div class="ui link list">
+        {{#if isCustomer }}
   <div class="active item">
       <a href="/topup">
       <div class="ui sidebarButton">
@@ -19,6 +20,10 @@
       </div>
     </a>
     </div>
+    {{/if}}
+
+    {{#if isRetailer }}
+
   <div class="item">
       <a href="/add_voucher">
       <div class="ui sidebarButton">
@@ -28,6 +33,10 @@
       </div>
     </a>
   </div>
+  {{/if}}
+
+  {{#if isCustomer }}
+
   <div class="item">
       <a href="/my_vouchers">
       <div class="ui sidebarButton">
@@ -37,6 +46,10 @@
       </div>
     </a>
   </div>
+  {{/if}}
+
+
+  {{#if isCustomer }}
   <div class="item">
       <a href="/update_customer_profile">
       <div class="ui sidebarButton">
@@ -46,6 +59,10 @@
       </div>
     </a>
   </div>
+  {{/if}}
+
+  {{#if isRetailer }}
+
   <div class="item">
       <a href="/update_retailer_profile">
       <div class="ui sidebarButton">
@@ -55,6 +72,9 @@
       </div>
     </a>
   </div>
+  {{/if}}
+
+
   <a class="item">
     <a class="logout" href="/logout">
     <div class="ui sidebarButton">
