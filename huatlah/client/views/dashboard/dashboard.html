@@ -145,14 +145,50 @@
                 </div>
             {{/each}}
       </div>
+      <div class="row">
+      <a href="/vouchers">
+        <input class="ui green submit button"  style="width:100%;height:60px;padding:10px;" type="button" value="View All Vouchers"/>
+      </a>
+    </div>
       {{/if}}
 
 
       {{#if isRetailer }}
 
-        <h2>
-          Latest Vouchers Redeemed
-        </h2>
+      <div class="ui two column stackable doubling grid">
+        <div class="column">
+          <div class="ui segment customer-table">
+            <div class="ui statistic" style="text-align:center;margin:0 auto; display:block;width:100%;max-width:100%;">
+              <div class="label">
+                Total Vouchers
+              </div>
+              <div class="value">
+                  {{totalVouchers}}
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="column">
+
+          <div class="ui segment customer-table">
+
+            <div class="ui statistic" style="text-align:center;margin:0 auto; display:block;width:100%;max-width:100%;">
+              <div class="label">
+
+              </div>
+              <div class="value balance">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ui link cards featured_vouchers">
 
         {{#each latestVouchers}}
             <div class="card voucherCard">
@@ -174,10 +210,7 @@
               <div class="extra content">
                 <span class="right floated">
 
-                  <a href="/redeem/{{_id}}/{{user_id}}">
-                  <div class="ui green button">Redeem</div>
-                </a>
-
+                
                 </span>
                 <span>
                   <i class="user icon"></i>
@@ -186,7 +219,7 @@
               </div>
             </div>
         {{/each}}
-
+      </div>
 
 
       {{/if}}

@@ -92,3 +92,19 @@ Router.route("/redeem/:id/:user_id", function() {
   this.response.end();
 
 }, { where: "server" });
+
+
+// Router.route("/deleteVoucher/:quantity/:points/:user_id", function() {
+//   var v = vouchers.findOne({"points":points,"quantity":quantity});
+//   var user_id =  this.params.user_id;
+//   vouchers.remove(id);
+//   //
+//   // Meteor.users();
+//   //
+//
+//   this.response.writeHead(302, {
+//     'Location':  '/dashboard'
+//   });
+//   this.response.end();
+//
+// }, { where: "server" });

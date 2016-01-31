@@ -6,15 +6,15 @@ Template.dashboard.rendered=function ()
 
 Template.dashboard.helpers({
   createdAtFormatted: function () {
-  return moment(this.createdAt).format('DD/MM/YYYY');
+  return moment(this.createdAt).format('MMMM Do YYYY HH:MM a');
 },
   getPoints:function()
   {
-    return points.find({} ,{limit: 3});
+    return points.find({"customer_id":Meteor.userId()} ,{sort: {'createdAt' : -1}, limit:3 });
   },
   getTransactions:function()
   {
-    return transactions.find({} ,{limit: 3});
+    return transactions.find({"customer_id":Meteor.userId()} ,{sort: {'createdAt' : -1}, limit:3 });
   },
   isAdmin:function()
   {
@@ -29,7 +29,7 @@ Template.dashboard.helpers({
     return (Meteor.user().profile.type == "2")
   },
     'vouchersList': function() {
-    return vouchers.find();
+    return vouchers.find({},{sort: {'createdAt' : -1},limit:6 });
   },
     'latestVouchers': function() {
     return JSON.parse(Meteor.user().profile.voucher_list);

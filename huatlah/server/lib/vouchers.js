@@ -13,6 +13,8 @@ Meteor.methods({
       jsonArray.push(v);
       jsonArray = JSON.stringify(jsonArray);
       Meteor.users.update(Meteor.userId(),{$set: {"profile.voucher_list": jsonArray }});
+      vouchers.insert(v);
+
 
   }
 });

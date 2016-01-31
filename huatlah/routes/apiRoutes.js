@@ -8,7 +8,6 @@ Router.route( "users/addTransaction/:id", { where: "server" } )
   .put( function() {
       var user_id = this.params.id;
       var data=  this.request.body;
-      console.log(JSON.stringify(data));
       var moneydiff = Number(data.moneybalance);
       var roundedDiff = Math.ceil(moneydiff);
       moneydiff = roundedDiff - moneydiff;
@@ -23,9 +22,7 @@ Router.route( "users/addTransaction/:id", { where: "server" } )
       points.insert({"customer_id":user_id,points:pointsdiff,"createdAt":new Date().valueOf()});
 
       var fundObj = fund.findOne("1");
-      console.log(fundObj.amount  +" : "+  moneydiff);
       var totalAmt = fundObj.amount + moneydiff;
-      console.log(totalAmt);
       fund.update("1",{$set:{"amount": totalAmt  }});
 
 
@@ -70,7 +67,6 @@ Router.route( "users/addBalance/:id", { where: "server" } )
       var needy_id = this.params.id;
 
       var needyUser =  needy.findOne(needy_id);
-      console.log(JSON.stringify(needyUser));
       var meal_count = needyUser.coupon_quantity - 1;
       needy.update(needy_id,{$set:{"coupon_quantity": meal_count}});
       this.response.setHeader( 'access-control-allow-origin', '*' );
